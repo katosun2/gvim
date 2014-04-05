@@ -75,7 +75,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'mbbill/fencview'
 
-Plugin 'vim-scripts/load_template'
+Plugin 'tpope/vim-surround'
 
 filetype plugin indent on
 
@@ -122,8 +122,8 @@ set report=0
 
 
 " set font
-set guifont=Consolas:h12:cANSI 
-set guifontwide=Fixedsys:h12:cGB2312  
+set guifont=Consolas:h13:cANSI 
+set guifontwide=Fixedsys:h13:cGB2312  
 set linebreak 
 set nowrap
 set backspace=indent,eol,start 

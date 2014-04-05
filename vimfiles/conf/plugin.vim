@@ -11,6 +11,10 @@ map <silent><leader>sm <esc><s-g>o<esc>:Modeliner<cr>
 map <F9> :Calendar<cr>
 
 
+" html.xml
+let g:xml_createdocument = 0
+
+
 " AjaxMin comparess css/js 
 let g:ajaxmin_cmd = $VIMFILES.'/bin/Microsoft-Ajax-Minifier-4/AjaxMin.exe'
 let g:ajaxmin_cmd_jsopt = '-clobber:true -term'
