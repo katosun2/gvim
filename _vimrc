@@ -63,6 +63,7 @@ Plugin 'gmarik/vundle'
 
 Plugin 'katosun2/imiku'
 Plugin 'katosun2/load_template'
+Plugin 'katosun2/vim-dict'
 
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neocomplcache.vim'

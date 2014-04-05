@@ -34,7 +34,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory=$VIMFILES.'\neosnippets'
 
 

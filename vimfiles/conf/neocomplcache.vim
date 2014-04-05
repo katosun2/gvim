@@ -5,10 +5,13 @@ let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplcache_max_list = 10
+let g:neocomplcache_disable_auto_complete = 1
 
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
     \ 'default' : '',
+    \ 'css' : $VIMFILES.'/bundle/vim-dict/dict/css.dic',
+    \ 'javascript' : $VIMFILES.'/bundle/vim-dict/dict/javascript.dic',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
     \ 'scheme' : $HOME.'/.gosh_completions'
     \ }
@@ -22,6 +25,7 @@ let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 " Plugin key-mappings.
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
+inoremap <expr>`     neocomplcache#start_manual_complete()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
@@ -52,3 +56,4 @@ let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
