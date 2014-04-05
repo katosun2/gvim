@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>专题名称 - 爱拍游戏</title>
+    <meta name="Keywords" content="爱拍游戏,玩家宝宝,专题名称" />
+    <meta name="Description" content="爱拍游戏和专题名称合作，专题名称" />
+    <meta name="googlebot" content="index, follow" />
+    <link href="../../common/img/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../../common/img/comment/comment.css" rel="stylesheet" type="text/css" />
+    <link href="img/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../common/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../../../common/js/pop_dialog.js"></script>
+    <script type="text/javascript" src="../../../common/js/pop_friend.js"></script>
+    <script type="text/javascript" src="../../../common/js/AC_RunActiveContent.js"></script>
+    <script type="text/javascript" src="../../../common/js/jquery.dsTab.js"></script>
+    <script type="text/javascript" src="../../../common/js/gameScore.js"></script>
+    <script charset="utf-8" type="text/javascript">
+        var gameId = '${gameId}';
+        var gameid = '${gameId}';
+        //播放片头广告playStartRes函数名  "open"弹出,"disopen"不弹出
+        function playStartRes()
+        {
+            return "disopen";
+        }
+
+        //播放器画面右下悬浮广告 playRightRes函数名  "open"弹出,"disopen"不弹出
+        function playRightRes()
+        {
+            //登陆播放的次数
+            var playAdNum = 1;
+            //当前播放的次数
+            var nowPlayNum =  parseInt(Cookies.get('playNum'));
+            //return 	"open";
+            if (Cookies.get('b') != null)
+            {
+                return "disopen";
+            }
+            else
+            {
+                return "disopen";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--=S mainTop -->
+    <tal:block metal:use-macro="macro/inter.html/new_menu">
+    <div class="mainTop">
+        <div class="navMax">
+            <div class="logo"><a href="http://www.aipai.com/" title="爱拍游戏-全球最大的玩家原创互动站"><img src="http://www.aipai.com/app/www/templates/common/img/head/hd_logo.png" alt="爱拍游戏!www.aipai.com" /></a></div>
+            <div class="nav">
+                <a href="http://www.aipai.com">首页</a>&nbsp;|&nbsp;<a href="http://www.aipai.com/space.php">我的爱拍</a>&nbsp;|&nbsp;<a href="http://www.aipai.com/card.html" target="_blank">游戏视频</a>&nbsp;|&nbsp;<a href="http://www.aipai.com/book.html" target="_blank">连环画</a>&nbsp;|&nbsp;<a href="http://www.aipai.com/game_gameid-10596.html" target="_blank">第7区<span></span></a>&nbsp;|&nbsp;<a href="http://www.aipai.com/declare.html" target="_blank">正在发布</a>&nbsp;|&nbsp;<a href="http://www.aipai.com/group.html" target="_blank">组织</a>&nbsp;|&nbsp;<a href="http://ka.aipai.com/" target="_blank">抢号</a>&nbsp;|&nbsp;<a href="http://bbs.aipai.com/" target="_blank">论坛</a>&nbsp;|&nbsp;
+                <span id="yy_btn" class="yy_btn">
+                    <a class="yy_btna" href="http://hero.aipai.com/" title="游戏中心-英雄世界！" target="_blank">游戏中心</a>
+                    <span class="yy_listbg"></span>
+                    <ul class="yy_list">
+                        <li><a target="_blank" href="http://nb.aipai.com/">南帝北丐</a></li>
+                        <li><a target="_blank" href="http://hero.aipai.com/">英雄世界</a></li>
+                    </ul>
+                </span>
+            </div>
+            <div class="bnt" id="loginDiv1"><a href="#" onClick="javascript:checkloginNew(interview,0);return false;">登陆爱拍</a><a href="http://www.aipai.com/signup.php" target="_blank">免费注册</a></div>
+            <div class="entry hidden" id="loginDiv2"><a href="#" class="yhu" id="userLink">小员外下凡偷吃啦</a><a href="http://www.aipai.com/sysmsg.php">消息<span id="login_mailnum_span" style="display:none;">(<span id="login_mailimg"><img src="http://www.aipai.com/app/www/templates/common/img/head/hd_msg.gif" width="16" height="12" /></span><span id="login_mailnum">0</span>) </span></a>&nbsp;|&nbsp;<a href="javascript:ajaxLogOut();">登出</a></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var _yy_btn = document.getElementById('yy_btn');
+    _yy_btn.onmouseover = function(){
+        _yy_btn.className = 'yy_btn yy_btn_down';
+    }
+    _yy_btn.onmouseout = function(){
+        _yy_btn.className = 'yy_btn';
+    }
+    </script>
+    </tal:block>
+    <!--=E mainTop -->
+    <script type="text/javascript" src="../../../common/js/login.js"></script>
+
+    <!--=S wraper-->
+    <div class="wraper">
+        <div class="banner_n1"><div class="banner_con_n1"></div></div>
+        <div class="banner_n2"><div class="banner_con_n2"></div></div>
+        <div class="banner_n3"><div class="banner_con_n3"></div></div>
+
+        <div class="inner">
+            <div class="wrapin">
+
+                <!--====S main_nav-->
+                <div class="main_nav">
+                    <ul class="wrapfix">
+                        <li class="it1"><a href="#" target="_blank" title=""></a></li>
+                        <li class="it2"><a href="#" target="_blank" title=""></a></li>
+                        <li class="it3"><a href="#" target="_blank" title=""></a></li>
+                        <li class="it4"><a href="#" target="_blank" title=""></a></li>
+                        <li class="it5"><a href="#" target="_blank" title=""></a></li>
+                        <li class="it6"><a href="#" target="_blank" title=""></a></li>
+                    </ul>
+                </div>
+                <!--====E main_nav-->
+
+                <!--====S mod_con_n1-->
+                <div class="mod_con_n1">
+                    <div class="hd"></div>
+                    <div class="bd"></div>
+                    <div class="ft"></div>
+                </div>
+                <!--====E mod_con_n1-->
+
+                <!--====S mod_con_intro-->
+                <div class="mod_con_intro">
+                    <div class="hd"></div>
+                    <div class="bd"></div>
+                    <div class="ft"></div>
+                </div>
+                <!--====E mod_con_intro-->
+
+            </div>
+        </div>
+    </div>
+    <!--=E wraper-->
+
+    <!--=S mod_foot -->
+    <div class="mod_footer">
+    <tal:block metal:use-macro="macro/foot.html/foot">
+    <div class="foot">
+        <div class="text"><a href="http://www.aipai.com/signup.php" class="black" target="_blank">免费注册</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://bbs.aipai.com/viewthread.php?tid=14880&amp;extra=page%3D1" target="_blank">客服</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.aipai.com/about/help.html" target="_blank">玩家宝宝帮助</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.aipai.com/about/product.html" target="_blank">产品与服务</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.aipai.com/about/contact.html" target="_blank">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.aipai.com/about/service.html" target="_blank">广告服务</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.aipai.com/about/copyright.html" target="_blank">版权指引</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.aipai.com/about/map.html" target="_blank">网站地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.aipai.com/about/friend.html" target="_blank">友情链接</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.aipai.com/about/zhaopin.html" target="_blank">加入爱拍</a></div>
+        <div class="site">版权所有 广州爱拍网络科技有限公司 增值电信业务经营许可证：粤B2-20065254 <a href="http://www.aipai.com/app/www/templates/common/img/shitingzheng.gif" target="_blank">信息网络传播视听节目许可证：1910412号</a>
+        </div>
+    </div>
+    </tal:block>
+    </div>
+    <!--=E mod_foot -->
+
+<!--=S mod_popshare-->
+<script charset="utf-8" type="text/javascript">
+    //分享
+    var sharetitle = encodeURIComponent(document.title);
+    var shareurl = encodeURIComponent(location.href);
+    var sharetxt = sharetitle + shareurl;
+    var qqzone = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+shareurl;
+    var wb163 = "http://t.163.com/article/user/checkLogin.do?info="+sharetxt+"&link="+shareurl+"&source=爱拍游戏";
+    var renren = "http://share.renren.com/share/buttonshare?link="+shareurl+"&title="+sharetitle;
+    var sinawb = "http://v.t.sina.com.cn/share/share.php?appkey=3326190289&ralateUid=1770320005&title="+sharetitle+"&url="+shareurl;
+    var qqwb = "http://v.t.qq.com/share/share.php?appkey=f49d1ead778c4be0ab5c988d228d8a2f&site=http://www.aipai.com&title="+sharetitle+"&url="+shareurl;
+    function copyToClipboard(){
+        //Design Marko
+        //MSIE
+         if(window.clipboardData){
+            window.clipboardData.clearData();
+            window.clipboardData.setData("Text", decodeURIComponent(sharetxt));
+            alert('复制成功，您可以将其粘贴到论坛、博客、贴吧分享啦！');
+         }
+         //Opera
+         else if(navigator.userAgent.indexOf("Opera") != -1){
+            window.location = sharetxt;
+         }
+         //netscape
+         else if(window.netscape){
+            try{
+               netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            }catch(e){
+               prompt("CTRL+C复制链接地址",decodeURIComponent(sharetxt));
+            }
+         }else{
+            prompt("CTRL+C复制链接地址",decodeURIComponent(sharetxt));
+         }
+    }
+</script>
+<div class="mod_popshare" style="display:none;">
+    <div class="popshare_box">
+        <span class="tabtit"></span>
+        <div class="tabcon">
+            <div class="share_con">
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="this.href=qqzone" target="_blank" class="ico_qz">qq空间</a>　<a class="ico_ne" target="_blank" href="javascript:void(0)" onclick="this.href=wb163">网易微博</a></li>
+                    <li><a class="ico_rr" target="_blank" href="javascript:void(0)" onclick="this.href=renren">人人网</a>　<a class="ico_sina" target="_blank" href="javascript:void(0)" onclick="this.href=sinawb">新浪微博</a></li>
+                    <li><a class="ico_tc" target="_blank" href="javascript:void(0)" onclick="this.href=qqwb">腾讯微博</a><a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var f='http://t.sohu.com/third/post.jsp?',u=z||d.location,p=['&url=',e(u),'&title=',e(t||d.title),'&content=',c||'gb2312','&pic=',e(p||'')].join('');function%20a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=660,height=470,left=',(s.width-660)/2,',top=',(s.height-470)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,'','','','','','utf-8'));" class="ico_sohu">搜狐微博</a></li>
+                    <li><a href="javascript:void(0)" class="ico_copy" onclick="copyToClipboard();">复制地址给QQ/MSN好友</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=Emod_popshare-->
+
+<script charset="utf-8" type="text/javascript">
+    $(function(){
+        $('.mod_popshare').floatright();
+    })
+</script>
+    <script type="text/javascript" src="../../common/js/jquery.floatright.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

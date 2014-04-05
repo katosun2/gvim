@@ -1,0 +1,16 @@
+{
+  "name": "testGrunt",
+  "version": "0.1.0",
+  "description": "测试 grunt ",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "long",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-less": "~0.9.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "testGrunt",
+  "version": "0.1.0",
+  "description": "Project Description",
+  "repository": {
+      "type": "git",
+      "url": "git://github.com/path/to/your_project"
+  },
+  "main": "Gruntfile.js",
+  "scripts": {
+    //"start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Author Name",
+  "license": "BSD",
+  "readmeFilename": "readme.md",
+  "gitHead": "git head",
+  "dependencies": { },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-jasmine": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-jshint" : "~0.8.0"
+  }
+}

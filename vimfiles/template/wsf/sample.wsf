@@ -1,0 +1,19 @@
+<package>
+
+<job id="vbs">
+
+<script language="VBScript">
+
+</script>
+
+</job>
+
+<job id="js">
+
+<script language="Javascript">
+
+</script>
+
+</job>
+
+</package>

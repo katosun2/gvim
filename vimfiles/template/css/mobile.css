@@ -1,0 +1,22 @@
+@charset "UTF-8";
+*{margin:0;padding:0;}
+html{font-size:16px;}
+table{border-collapse:collapse;border-spacing:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+ul,ol,li{list-style:none;-webkit-appearance: listitem;}
+em,i{font-style:normal;}
+img{border:0;}
+a,input,select,textarea{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+body{color:#333333;background:#FFFFFF;-webkit-text-size-adjust:none;}
+
+/*media*/
+@media(-webkit-min-device-pixel-ratio:1){
+    /* 中分辨率屏幕 */
+}
+@media(-webkit-min-device-pixel-ratio:1.5){
+    /*高分辨率屏幕*/
+}
+@media(-webkit-min-device-pixel-ratio:2){
+    /*超高分辨率屏幕（传说中的Retina屏）*/
+}
+@media screen and (max-width:768px){ }

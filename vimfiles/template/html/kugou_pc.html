@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<!--kugoubegin-->
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>专辑搜索 - 酷狗音乐</title>
+<script charset="utf-8" type="text/javascript">
+    try{external.SuperCall(1);} catch (ex) {}
+    try{external.SuperCall(40, '{"status":"1", "speed":"80", "autotime":"5"}');} catch(e){}
+    //避免出错
+    //window.onerror = function(){
+    //    return true;
+    //};
+    (function(){
+        var ver = 0;
+        var mark = '{}';
+        try{
+            ver = external.GetVersion();
+            mark = external.SuperCall(674);
+        }catch(ex){}
+        mark = mark || '{}';
+        var o = new Function("return " + mark)();
+        if(o.status && o.status == 1 && o.isvip == 1){
+            mark = true;
+        }else{
+            mark = false;
+        }
+        if(ver >= 7550 && mark){
+            document.getElementsByTagName("html")[0].className += "v7550 v7550_vipmark";
+        }else if(ver >= 7550 && !mark){
+            document.getElementsByTagName("html")[0].className += "v7550";
+        }
+    })();
+</script>
+<link href="../static/css/style.css?20131209" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+</body>
+</html>
+<script type="text/javascript" src="http://static.kugou.com/common/js-lib/min/base-min.js"></script>
+<script type="text/javascript" src="http://static.kugou.com/common/js-lib/min/supercall-min.js"></script>
+<script charset="utf-8" type="text/javascript">
+/**
+ * 页面初始化入口
+ */
+function pageInit(){
+    //获取版本号
+    try{
+        /*ClientSearch.clientVer = external.GetVersion();*/
+    }catch(ex){}
+
+    /* 屏蔽选中 */
+    document.onselectstart = function(){return false;}
+
+    try {external.SuperCall(40, '{"status":"2", "speed":"0", "autotime":"0"}')} catch(ex) {}
+}
+init();
+</script>
+<!--kugouend--> 
