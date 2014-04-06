@@ -16,7 +16,7 @@ vimfiles/bin/nodejs
 vimfiles/bin/phantomjs
 vimfiles/bin/python
 vimfiles/bin/ruby
-vimfiles/bin/package
+vimfiles/bin/_package
 vimfiles/bin/setx.exe
 vimfiles/bin/git
 vimfiles/bin/MinGW
