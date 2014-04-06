@@ -10,4 +10,4 @@
 
     * 运行 init.bat
 
-    * 必须安装 git 和 mingw 
+    * 环境依懒 git , python, nodejs 和 mingw 

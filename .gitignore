@@ -1,5 +1,6 @@
 .svn
 .netrwhist
+.cache
 cd.bat
 init.bat
 install.bat
@@ -8,6 +9,7 @@ vim74
 backup/*
 swp/*
 my_plugin
+.ycm_extra_conf.pyc
 vimfiles/view
 vimfiles/bin/nodejs
 vimfiles/bin/phantomjs

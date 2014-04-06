@@ -1,8 +1,11 @@
 " set vim path
-let $VIMFILES=$VIM.'\vimfiles'
-let $VIMRC=$VIM.'\_vimrc'
-let $VIMHOME=$vim.'\vim73'
+let $VIMFILES=$VIM.'/vimfiles'
+let $VIMRC=$VIM.'/_vimrc'
+let $VIMHOME=$vim.'/vim73'
 let $VUNDLE=$VIMFILES."/bundle"
+let $UNDOCACHE=$VIM."/.cache/undodir"
+let $BACKUPCACHE=$VIM."/.cache/backup"
+let $SWPCACHE=$VIM."/.cache/swp"
 
 
 " set leader 
@@ -79,14 +82,14 @@ Plugin 'tpope/vim-surround'
 
 "Plugin 'majutsushi/tagbar'
 
-
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'scrooloose/syntastic'
 
+Plugin 'kien/ctrlp.vim'
+
 filetype plugin indent on
 
-let g:ycm_global_ycm_extra_conf=$VIMFILES.'\bundle\YouCompleteMe\cpp\ycm\.ycm_extra_conf.py'
 
 " set color
 color jellybeans
@@ -162,12 +165,6 @@ set titlelen=80
 set laststatus=2
 
 
-" set backup
-set noswapfile
-set backup
-set writebackup
-set history=10240
-
 
 " set optimization
 set timeout
@@ -206,34 +203,38 @@ au BufWinLeave _vimrc,*.js,*.html,*.htm,*.less,*.css,*.php,*.wiki silent mkview
 au BufWinEnter _vimrc,*.js,*.html,*.htm,*.less,*.css,*.php,*.wiki silent loadview
 
 
-" set catch path
-if isdirectory($VIM."/swp")
-    set directory=z:,$VIM/swp
-else
-    " 不设置.swp 文件 
-    set noswapfile
+" set swp
+set swapfile
+if exists('*mkdir') && !isdirectory($SWPCACHE)
+    sil! cal mkdir($SWPCACHE, 'p')
 endif
+set directory=z:,$SWPCACHE
 
-if isdirectory($VIM."/backup")
-    set backupcopy=auto
-    set backupdir=Z:,$VIM/backup
-    "set patchmode=.orig~
-endif
 
-if isdirectory($VIM."/undodir")
-    if v:version>='703' 
-        set undodir=z:,$VIM/undodir
-        set undofile
-        set undolevels=10000
-        set undoreload=10000
-    endif
+" set backup
+set backup
+set writebackup
+set history=10240
+set backupcopy=auto
+if exists('*mkdir') && !isdirectory($BACKUPCACHE)
+    sil! cal mkdir($BACKUPCACHE, 'p')
 endif
+set backupdir=Z:,$BACKUPCACHE
+
+
+" set undo
+set undofile
+set undolevels=10000
+set undoreload=10000
+if exists('*mkdir') && !isdirectory($UNDOCACHE)
+    sil! cal mkdir($UNDOCACHE, 'p')
+endif
+set undodir=z:,$UNDOCACHE
 
 
 "load my config
 source $VIM/vimfiles/conf/conf.vim
 source $VIM/vimfiles/conf/plugin.vim
-"source $VIM/vimfiles/conf/neocomplcache.vim
 source $VIM/vimfiles/conf/diff.vim
 
 

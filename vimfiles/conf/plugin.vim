@@ -1,5 +1,5 @@
 " open browsers's lnk path
-let $BROWSERS = $VIM.'\browsers'
+let $BROWSERS = $VIM.'/browsers'
 
 
 " modeliner
@@ -73,7 +73,9 @@ imap <leader>my <ESC>:AuthorInfoDetect<cr>
 let g:fencview_autodetect=0
 map <silent><F3> <ESC>:FencView<cr>
 
+
 " YouCompleteMe
+let g:ycm_global_ycm_extra_conf=$VIM.'.ycm_extra_conf.py'
 let g:ycm_min_num_of_chars_for_completion = 3
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_semantic_triggers = {
@@ -86,39 +88,26 @@ let g:ycm_semantic_triggers = {
 \ }
 
 
+" CtriP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_match_window = 'bottom,order:ttb,min:10,max:10,results:10'
+let g:ctrlp_switch_buffer = 'E'
+let g:ctrlp_open_new_file = 'h'
+let g:ctrlp_root_markers = ['.git','.svn']
+let g:ctrlp_cache_dir = 'z:/.cache/ctrlp'
+let g:ctrlp_max_depth = 5
+let g:ctrlp_max_history = 0
+let g:ctrlp_mruf_max = 250
+let g:ctrlp_mruf_include = '\.html\|\.less\|\.css|\.js$\|\.php$'
+set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll|zip|jpg|git|png)$',
+    \ 'link': '',
+\ }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-" lookupfile setting
-let g:LookupFile_MinPatLength = 4               "最少输入4个字符才开始查找
-let g:LookupFile_PreserveLastPattern = 1        "不保存上次查找的字符串
-let g:LookupFile_PreservePatternHistory = 1     "保存查找历史
-let g:LookupFile_AlwaysAcceptFirst = 1          "回车打开第一个匹配项目
-let g:LookupFile_AllowNewFiles = 0              "不允许创建不存在的文件
-"if filereadable("./tags")                       "设置tag文件的名字
-"    let g:lookupfile_tagexpr = '"./tags"'
-"endif
-""映射LookupFile为,lk 在Tag文件中查找
-nmap <silent><leader>lk <ESC>:LUTags<cr>
-""映射LUBufs为,ll 在缓存区查找
-nmap <silent><leader>ll <ESC>:LUBufs<cr>
-""映射LUWalk为,lw 在目录结构查找
-nmap <silent><leader>lw <ESC>:LUWalk<cr>
-nmap <silent><leader><F5> <ESC>:LUWalk<cr>
-nmap <silent><F5><F5> <ESC>:LUWalk<cr>
 
 
 "TurboMark
@@ -142,12 +131,3 @@ let g:jsdoc_additional_descriptions = 1
 map <silent><leader>jd <esc>:JsDoc<cr>
 inoremap <silent><leader>jd <esc>:JsDoc<cr>
 
-"CtriP
-"let g:ctrlp_map = '<c-p>'
-"let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ca'
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll|lnk|gif|bmp|jpg|png)$'
-  \ }
