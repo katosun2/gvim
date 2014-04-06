@@ -69,7 +69,6 @@ Plugin 'katosun2/load_template'
 Plugin 'katosun2/vim-dict'
 
 Plugin 'Shougo/neosnippet'
-"Plugin 'Shougo/neocomplcache.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 
@@ -80,7 +79,7 @@ Plugin 'mbbill/fencview'
 
 Plugin 'tpope/vim-surround'
 
-"Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
@@ -204,7 +203,7 @@ au BufWinEnter _vimrc,*.js,*.html,*.htm,*.less,*.css,*.php,*.wiki silent loadvie
 
 
 " set swp
-set swapfile
+set noswapfile
 if exists('*mkdir') && !isdirectory($SWPCACHE)
     sil! cal mkdir($SWPCACHE, 'p')
 endif

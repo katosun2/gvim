@@ -109,6 +109,25 @@ let g:ctrlp_custom_ignore = {
 \ }
 
 
+" tagbar
+let g:tagbar_ctags_bin = $VIMFILES.'/bin/lib/ctags.exe'
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : $VIMFILES.'/bin/doctorjs/bin/jsctags.cmd'
+\ }
+imap <F10> <esc>:Tagbar<cr>
+nmap <F10> :Tagbar<cr>
+
+
+
+
+
+
+
+
+
+
+
+
 
 "TurboMark
 nmap <silent><leader>mm :call g:MarkLine()<CR>
