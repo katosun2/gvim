@@ -127,8 +127,8 @@ let g:syntastic_auto_loc_list = 2
 let g:syntastic_loc_list_height = 5
 let g:syntastic_mode_map = { 
     \ 'mode': 'active',
-    \ 'active_filetypes': ['javascript','ruby', 'php', 'python'],
-    \ 'passive_filetypes': ['html', 'css', 'xml']
+    \ 'active_filetypes': ['ruby', 'php', 'python'],
+    \ 'passive_filetypes': ['html', 'xml']
 \ }
 nmap <leader>st <esc>:SyntasticToggleMode<cr>
 nmap <leader>lo <esc>:lopen<cr>
@@ -166,4 +166,3 @@ let g:jsdoc_input_description = 0
 let g:jsdoc_additional_descriptions = 1
 map <silent><leader>jd <esc>:JsDoc<cr>
 inoremap <silent><leader>jd <esc>:JsDoc<cr>
-
