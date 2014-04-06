@@ -109,7 +109,7 @@ let g:ctrlp_custom_ignore = {
 \ }
 
 
-" tagbar
+" Tagbar
 let g:tagbar_ctags_bin = $VIMFILES.'/bin/lib/ctags.exe'
 let g:tagbar_type_javascript = {
     \ 'ctagsbin' : $VIMFILES.'/bin/doctorjs/bin/jsctags.cmd'
@@ -118,6 +118,36 @@ imap <F10> <esc>:Tagbar<cr>
 nmap <F10> :Tagbar<cr>
 
 
+" syntastic
+let g:syntastic_check_on_open = 0
+let g:syntastic_echo_current_error = 1
+let g:syntastic_enable_balloons = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_loc_list_height = 5
+let g:syntastic_mode_map = { 
+    \ 'mode': 'active',
+    \ 'active_filetypes': ['javascript','ruby', 'php', 'python'],
+    \ 'passive_filetypes': ['html', 'css', 'xml']
+\ }
+nmap <leader>st <esc>:SyntasticToggleMode<cr>
+nmap <leader>lo <esc>:lopen<cr>
+nmap <leader>lc <esc>:lclose<cr>
+
+
+" jslint Or JShint
+let g:jslint_command = $VIMFILES.'/bin/jsl-0.3.0/jsl.exe'
+let g:jslint_command_options = '-nofilelisting -nocontext -nosummary -nologo -process'
+map <silent><leader>jj <esc>:call ToJSLint()<cr>
+inoremap <silent><leader>jj <esc>:call ToJSLint()<cr>
+function! ToJSLint()
+    let current_file = shellescape(expand('%:p'))
+    if !executable("node")
+        call JavascriptLint()
+    else
+        :SyntasticCheck
+    endif
+endfunc
 
 
 
@@ -128,19 +158,6 @@ nmap <F10> :Tagbar<cr>
 
 
 
-
-"TurboMark
-nmap <silent><leader>mm :call g:MarkLine()<CR>
-nmap <silent><leader>'' :TurboFind<CR>
-nmap <silent><leader>m' :TurboClear<CR>
-
-" Mark
-nmap <silent><leader>ms :MarkSave<cr>
-nmap <silent><leader>ml :MarkLoad<cr>
-
-
-" yankring：寄存器可视操作
-map <silent><leader>p :YRShow<cr>
 
 
 "jsdoc.vim

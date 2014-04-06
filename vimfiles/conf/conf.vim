@@ -74,17 +74,6 @@ set statusline+=%8*\ %4*%{g:ShowFen()}\
 set statusline+=\ %r%m%8*%=\ %8*%-16{strftime(\"%Y-%m-%d\ %H:%M\")}\ 
 set statusline+=\ %5*©2014\ 
 
-hi User1 guifg=#000009 guibg=#C2BFA5 gui=bold
-hi User2 guifg=#2222FF guibg=#C2BFA5 gui=bold
-hi User3 guifg=#151515 guibg=#C2BFA5 gui=bold
-hi User4 guifg=#910000 guibg=#C2BFA5 gui=bold
-hi User5 guifg=#952121 guibg=#C2BFA5 gui=bold
-hi User6 guifg=#960066 guibg=#C2BFA5 gui=bold
-hi User7 guifg=#4386C7 guibg=#413C41 gui=bold
-hi User8 guifg=#413c41 guibg=#C2BFA5 gui=bold
-
-hi StatusLine guifg=#000000 guibg=#C2BFA5
-hi StatusLineNC guifg=#CCCCCC guibg=#413C41 
 
 " Omni menu colors
 hi Pmenu guifg=#CCCCCC guibg=#333333
@@ -138,9 +127,6 @@ vmap <C-z> <ESC>:w<cr>
 map <silent><A-q> <ESC>:q!<cr>
 map <silent><leader>q <ESC>:bdele!<cr>
 map <silent><localleader>ww <ESC>:w!<cr>
-
-"打开链接
-nnoremap <localleader><cr> <esc>:call g:OpenURL()<CR>
 
 "粘贴系统剪贴板
 "v模式，输入 "Ny ,N为寄存器地址, *为系统，实现多窗口复制
@@ -350,15 +336,6 @@ endf
 function! g:PathProc(file)
     let current_file = substitute(a:file,'Program Files','Progra~1','g')
     return current_file
-endfunction
-
-"打开链接"
-function! g:OpenURL()
-    let l:url = matchstr(getline('.'), 'http\(s\)\?://\S*')
-    if l:url != ""
-        echomsg "Open " . l:url ." succ. ^_^" 
-        execute 'silent ! start '.l:url
-    endif
 endfunction
 
 " 显示缩进方式
