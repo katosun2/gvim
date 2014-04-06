@@ -15,10 +15,21 @@ map <F9> :Calendar<cr>
 let g:xml_createdocument = 0
 
 
+" complie Less
+let g:less_complie = 0
+let g:less_opt = 2
+map <silent><leader>l1 <esc>:let g:less_opt=1<cr>:echo 'Done! now is min && mutline ^_^'<cr>
+map <silent><leader>l2 <esc>:let g:less_opt=2<cr>:echo 'Done! now is min && inline ^_^'<cr>
+map <silent><leader>l3 <esc>:let g:less_opt=3<cr>:echo 'Done! now is base ^_^'<cr>
+map <f6> <esc>:call g:OpenComileLess()<cr>
+inoremap <f6> <esc>:call g:OpenComileLess()<cr>
+
+
 " AjaxMin comparess css/js 
 let g:ajaxmin_cmd = $VIMFILES.'/bin/Microsoft-Ajax-Minifier-4/AjaxMin.exe'
 let g:ajaxmin_cmd_jsopt = '-clobber:true -term'
 let g:ajaxmin_cmd_cssopt = '-clobber:true -term -comments:hacks'
+
 
 " Load Template
 let g:template_path = $VIMFILES.'\template\'
@@ -62,6 +73,17 @@ imap <leader>my <ESC>:AuthorInfoDetect<cr>
 let g:fencview_autodetect=0
 map <silent><F3> <ESC>:FencView<cr>
 
+" YouCompleteMe
+let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_semantic_triggers = {
+    \ 'c' : ['->', '.'],
+    \ 'cpp,objcpp' : ['->', '.', '::'],
+    \ 'ruby' : ['.', '::'],
+    \ 'php' : ['->', '::'],
+    \ 'javascript,vim,python,go' : ['.'],
+    \ 'css' : [':']
+\ }
 
 
 
@@ -79,27 +101,6 @@ map <silent><F3> <ESC>:FencView<cr>
 
 
 
-
-
-
-
-" Tag list (ctags)
-let g:tlist_javascript_settings = 'javascript;o:object;f:function;m:member;s:string;a:array'
-let Tlist_Ctags_Cmd=$VIMFILES.'/bin/ctags/ctags.exe'  "设定windows系统中ctags程序的位置
-let Tlist_Ctags_Cmd = substitute(Tlist_Ctags_Cmd,'Program Files','Progra~1','g')
-let Tlist_Ctags_Cmd = g:TranCoding(Tlist_Ctags_Cmd,"utf-8","gbk")
-let Tlist_Auto_Open=0                        "关闭自动打开列表
-let Tlist_Show_One_File=1            "不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow=0                  " 如果Taglist窗口是最后一个窗口则退出Vim
-let Tlist_Use_Right_Window=1                 " 在右侧窗口中显示
-let Tlist_Enable_Fold_Column=1    "使taglist插件不显示左边的折叠行，
-let Tlist_WinWidth=30             "taglist窗口宽度
-let Tlist_GainFocus_On_ToggleOpen=1
-let Tlist_Use_SingleClick=1
-let Tlist_Close_On_Select=1
-"set tags=./tags,./../tags,./**/tags
-set tags=$VIM.'/ctags.cnf'
-map <F10> <ESC>:TlistToggle<CR>
 
 " lookupfile setting
 let g:LookupFile_MinPatLength = 4               "最少输入4个字符才开始查找
@@ -133,16 +134,6 @@ nmap <silent><leader>ml :MarkLoad<cr>
 " yankring：寄存器可视操作
 map <silent><leader>p :YRShow<cr>
 
-"complie Less
-"auto open complie less to css 1: auto | 0:manual
-let g:less_complie = 0
-" 1 min && mutline | 2 min && inline | 3 base
-let g:less_opt = 2
-map <silent><leader>l1 <esc>:let g:less_opt=1<cr>:echo 'Done! now is min && mutline ^_^'<cr>
-map <silent><leader>l2 <esc>:let g:less_opt=2<cr>:echo 'Done! now is min && inline ^_^'<cr>
-map <silent><leader>l3 <esc>:let g:less_opt=3<cr>:echo 'Done! now is base ^_^'<cr>
-map <f6> <esc>:call g:OpenComileLess()<cr>
-inoremap <f6> <esc>:call g:OpenComileLess()<cr>
 
 "jsdoc.vim
 let g:jsdoc_input_description = 0

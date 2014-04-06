@@ -66,7 +66,7 @@ Plugin 'katosun2/load_template'
 Plugin 'katosun2/vim-dict'
 
 Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neocomplcache.vim'
+"Plugin 'Shougo/neocomplcache.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 
@@ -77,8 +77,16 @@ Plugin 'mbbill/fencview'
 
 Plugin 'tpope/vim-surround'
 
+"Plugin 'majutsushi/tagbar'
+
+
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'scrooloose/syntastic'
+
 filetype plugin indent on
 
+let g:ycm_global_ycm_extra_conf=$VIMFILES.'\bundle\YouCompleteMe\cpp\ycm\.ycm_extra_conf.py'
 
 " set color
 color jellybeans
@@ -225,7 +233,7 @@ endif
 "load my config
 source $VIM/vimfiles/conf/conf.vim
 source $VIM/vimfiles/conf/plugin.vim
-source $VIM/vimfiles/conf/neocomplcache.vim
+"source $VIM/vimfiles/conf/neocomplcache.vim
 source $VIM/vimfiles/conf/diff.vim
 
 
