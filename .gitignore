@@ -1,3 +1,4 @@
+.git
 .svn
 .netrwhist
 .cache
@@ -16,7 +17,6 @@ vimfiles/bin/phantomjs
 vimfiles/bin/python
 vimfiles/bin/ruby
 vimfiles/bin/package
-vimfiles/bin/doctorjs
 vimfiles/bin/setx.exe
 vimfiles/bin/git
 vimfiles/bin/MinGW

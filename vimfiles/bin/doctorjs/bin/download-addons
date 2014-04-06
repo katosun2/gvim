@@ -1,0 +1,38 @@
+#!/bin/bash
+
+export THIS_YEAR=`date +%Y`
+export EMAIL=`whoami`'@mozilla.com'
+
+list_addons() {
+  ftp -n ftp.mozilla.org <<EOT | grep -v 'Passive mode' | awk '{print $9;}'
+user anonymous ${EMAIL}
+cd /pub/mozilla.org/addons
+passive
+dir
+quit
+EOT
+}
+
+list_dir() {
+  local ADDON_DIR=$1
+  ftp -n ftp.mozilla.org <<EOT | grep -v 'Passive mode' | grep -E '\-[^-]*fx[^-]*(-[a-z0-9]+)?\.(xpi|jar)$' | awk '{if ($8 ~ /:/) print $6,$7,'${THIS_YEAR}',$9; else print $6,$7,$8,$9;}'
+user anonymous ${EMAIL}
+cd /pub/mozilla.org/addons/${ADDON_DIR}
+passive
+dir
+EOT
+}
+
+download_addon() {
+  local ADDON_DIR=$1
+  local XPI_FILE=`list_dir ${ADDON_DIR} | sort -k3,3nr -k1,1Mr -k2,2nr -k4,4Vr | head -1 | awk '{print $4;}'`
+  if [ -n "${XPI_FILE}" ]; then
+    echo ${ADDON_DIR}/${XPI_FILE}
+    mkdir -p ${ADDON_DIR}
+    wget -q -O ${ADDON_DIR}/${XPI_FILE} http://ftp.mozilla.org/pub/mozilla.org/addons/${ADDON_DIR}/${XPI_FILE}
+  fi
+}
+
+for A in `list_addons`; do
+  download_addon ${A}
+done

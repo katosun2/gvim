@@ -1,0 +1,3 @@
+[submodule "narcissus"]
+	path = narcissus
+	url = git://github.com/mozilla/narcissus.git
