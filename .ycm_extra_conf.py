@@ -1,6 +1,5 @@
 import os
 import ycm_core
-from clang_helpers import PrepareClangFlags
 
 # These are the compilation flags that will be used in case there's no
 # compilation database set (by default, one is not set).
@@ -9,8 +8,8 @@ flags = [
 '-Wall',
 '-Wextra',
 '-Werror',
-#'-Wc++98-compat',
-#'-Wno-long-long',
+'-Wc++98-compat',
+'-Wno-long-long',
 '-Wno-variadic-macros',
 '-fexceptions',
 '-DNDEBUG',
@@ -60,6 +59,10 @@ flags = [
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1',
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
+'-isystem',
+'/vim/vimfiles/bin/package/LLVM/include',
+'-isystem',
+'/vim/vimfiles/bin/package/MinGW/include',
 ]
 
 
