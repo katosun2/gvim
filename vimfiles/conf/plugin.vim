@@ -95,7 +95,11 @@ let g:ctrlp_match_window = 'bottom,order:ttb,min:10,max:10,results:10'
 let g:ctrlp_switch_buffer = 'E'
 let g:ctrlp_open_new_file = 'h'
 let g:ctrlp_root_markers = ['.git','.svn']
-let g:ctrlp_cache_dir = 'z:/.cache/ctrlp'
+if isdirectory("z:/")
+    let g:ctrlp_cache_dir = 'z:/.cache/ctrlp'
+else
+    let g:ctrlp_cache_dir = $VIM.'/.cache/ctrlp'
+endif
 let g:ctrlp_max_depth = 5
 let g:ctrlp_max_history = 0
 let g:ctrlp_mruf_max = 250
