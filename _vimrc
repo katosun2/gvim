@@ -69,7 +69,7 @@ Plugin 'katosun2/imiku'
 Plugin 'katosun2/vim-dict'
 Plugin 'katosun2/load_template'
 
-Plugin 'Shougo/neosnippet'
+"Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 
@@ -85,6 +85,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'sirver/ultisnips'
 
 Plugin 'kien/ctrlp.vim'
 

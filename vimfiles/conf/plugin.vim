@@ -32,7 +32,7 @@ let g:ajaxmin_cmd_cssopt = '-clobber:true -term -comments:hacks'
 
 
 " Load Template
-let g:template_path = $VIMFILES.'\template\'
+let g:template_path = $VIMFILES.'/bundle/imiku/template/'
 map <F8> <ESC>:LoadTemplate<cr>
 
 
@@ -86,6 +86,15 @@ let g:ycm_semantic_triggers = {
     \ 'javascript,vim,python,go' : ['.'],
     \ 'css' : [':']
 \ }
+
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-h>"
+let g:UltiSnipsJumpBackwardTrigger="<c-l>"
+
+" If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
 
 
 " CtriP
