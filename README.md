@@ -25,5 +25,6 @@
 - 运行 init.bat，安装需要的软件环境
 - 运行 gvim 执行命令 :PluginInstall 安装插件
 - 编译 You Complete Me ，教程看这里：https://github.com/Valloric/YouCompleteMe/wiki/Windows-Installation-Guide
-- 进入 <USERFOLDER>\vimfiles\bundle\tern_for\ 运行 npm install 安装模块功能
+- 进入 %USERFOLDER%\vimfiles\bundle\tern_for\ 运行 npm install 安装模块功能
+- 全局安装 jshint，运行 npm install jshint -g
 

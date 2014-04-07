@@ -66,10 +66,12 @@ Plugin 'gmarik/vundle'
 
 Plugin 'katosun2/jellybeans.vim'
 Plugin 'katosun2/imiku'
+Plugin 'katosun2/xml.vim'
 Plugin 'katosun2/vim-dict'
 Plugin 'katosun2/load_template'
 
-"Plugin 'Shougo/neosnippet'
+Plugin 'honza/vim-snippets'
+
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 

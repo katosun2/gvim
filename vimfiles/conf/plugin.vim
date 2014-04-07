@@ -36,22 +36,6 @@ let g:template_path = $VIMFILES.'/bundle/imiku/template/'
 map <F8> <ESC>:LoadTemplate<cr>
 
 
-" neosnippet
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-let g:neosnippet#snippets_directory=$VIMFILES.'\neosnippets'
-
-
 " NERDTree
 let NERDMenuMode=0
 let NERDTreeShowBookmarks=0
@@ -76,25 +60,31 @@ map <silent><F3> <ESC>:FencView<cr>
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf=$VIM.'.ycm_extra_conf.py'
-let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_semantic_triggers = {
     \ 'c' : ['->', '.'],
     \ 'cpp,objcpp' : ['->', '.', '::'],
     \ 'ruby' : ['.', '::'],
     \ 'php' : ['->', '::'],
-    \ 'javascript,vim,python,go' : ['.'],
-    \ 'css' : [':']
+    \ 'javascript,vim,python,go' : ['.']
 \ }
 
 
 " Ultisnips
-let g:UltiSnipsExpandTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<c-h>"
-let g:UltiSnipsJumpBackwardTrigger="<c-l>"
+let g:UltiSnipsExpandTrigger = "<c-k>"
+let g:UltiSnipsJumpForwardTrigger = "<c-l>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-h>"
+let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsSnippetsDir = $VIMFILES."/bundle/imiku/UltiSnips"
 
 " If you want :UltiSnipsEdit to split your window.
 "let g:UltiSnipsEditSplit="vertical"
+"
+let g:snips_author_email = "neko@imiku.com"
+let g:snips_author = "katosun2"
 
 
 " CtriP
@@ -135,7 +125,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_loc_list_height = 5
 let g:syntastic_mode_map = { 
-    \ 'mode': 'active',
+    \ 'mode': 'passive',
     \ 'active_filetypes': ['ruby', 'php', 'python'],
     \ 'passive_filetypes': ['html', 'xml']
 \ }
