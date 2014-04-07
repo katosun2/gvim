@@ -60,7 +60,9 @@ flags = [
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
 '-isystem',
-'/vim/vimfiles/bin/package/LLVM/include',
+'/vim/vimfiles/bin/package/LLVM/include/clang-c',
+'-isystem',
+'/vim/vimfiles/bin/package/LLVM/include/llvm-c',
 '-isystem',
 '/vim/vimfiles/bin/package/MinGW/include',
 ]
