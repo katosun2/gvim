@@ -6,6 +6,7 @@ let $VUNDLE=$VIMFILES."/bundle"
 let $UNDOCACHE=$VIM."/.cache/undodir"
 let $BACKUPCACHE=$VIM."/.cache/backup"
 let $SWPCACHE=$VIM."/.cache/swp"
+let $VIEWCACHE=$VIM."/.cache/view"
 
 
 " set leader 
@@ -107,8 +108,6 @@ set formatoptions=tcrqn
 " set view
 set ambiwidth=double
 set tabstop=4
-" change tab to space
-set expandtab
 set smarttab
 set autoindent
 set shiftwidth=4
@@ -117,14 +116,13 @@ set list
 set listchars=tab:\|-
 set nu
 set numberwidth=5
-set ruler
-set rulerformat=%20(%2*%<%f%=\ %m%r\ %3l\ %c\ %p%%%)
+set title 
+set titlestring=%(%F%)\ 
+set titlelen=78
 set fillchars+=vert:\ ,stl:\ ,stlnc:\
-set whichwrap+=<,>,[,],b,s
+set whichwrap+=<,>,[,]
 set iskeyword+=_,$,@,%,#,-
 set t_Co=256
-set t_Sb=^[[4%dm
-set t_Sf=^[[3%dm
 
 
 " tab for cmd-line commplement
@@ -158,15 +156,8 @@ set selection=exclusive
 set selectmode=mouse,key
 
 
-" set title
-set title 
-set titlestring=%(%F%)\ 
-set titlelen=80
-
-
 " set status
 set laststatus=2
-
 
 
 " set optimization
@@ -198,12 +189,15 @@ set viminfo+=!
 set sessionoptions-=curdir
 
 
-" set autocmd
+" set view
 autocmd! bufenter,bufnewfile,winenter,tabenter * cd %:p:h
 autocmd! bufwritepost $VIMRC source $VIMRC
-" auto save foldinfo
-au BufWinLeave _vimrc,*.js,*.html,*.htm,*.less,*.css,*.php,*.wiki silent mkview
+au BufWinLeave _vimrc,*.js,*.html,*.htm,*.less,*.css,*.php,*.wiki mkview
 au BufWinEnter _vimrc,*.js,*.html,*.htm,*.less,*.css,*.php,*.wiki silent loadview
+if exists('*mkdir') && !isdirectory($VIEWCACHE)
+    sil! cal mkdir($VIEWCACHE, 'p')
+endif
+set viewdir=$VIEWCACHE
 
 
 " set swp
@@ -211,7 +205,7 @@ set noswapfile
 if exists('*mkdir') && !isdirectory($SWPCACHE)
     sil! cal mkdir($SWPCACHE, 'p')
 endif
-set directory=z:,$SWPCACHE
+set directory=z:/.cache/swp,$SWPCACHE
 
 
 " set backup
@@ -232,7 +226,7 @@ set undoreload=10000
 if exists('*mkdir') && !isdirectory($UNDOCACHE)
     sil! cal mkdir($UNDOCACHE, 'p')
 endif
-set undodir=z:,$UNDOCACHE
+set undodir=$UNDOCACHE
 
 
 "load my config
