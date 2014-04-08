@@ -4,7 +4,7 @@
 安装方式
 --------
 
-- 下载 package.1.0.zip 放到根目录，也可以在 vimfiles/bin/package 建立对应的目录，下载对应的安装包
+- 下载 package.1.0.zip 放到根目录 下载点这里http://pan.baidu.com/s/1nt0n0At，也可以在 vimfiles/bin/package 建立对应的目录，下载对应的安装包
     
     * nodejs => nodejs_v1.0.zip
 
