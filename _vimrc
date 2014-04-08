@@ -8,6 +8,7 @@ let $BACKUPCACHE=$VIM."/.cache/backup"
 let $SWPCACHE=$VIM."/.cache/swp"
 let $VIEWCACHE=$VIM."/.cache/view"
 let $BROWSERS=$VIM."/.cache/browsers"
+let $JSLBIN=$VIMFILES.'/bin/jsl-0.3.0/jsl.exe'
 
 
 " set leader 

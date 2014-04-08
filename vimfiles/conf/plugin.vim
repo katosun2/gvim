@@ -129,29 +129,21 @@ let g:syntastic_enable_balloons = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_loc_list_height = 5
-let g:syntastic_mode_map = { 
-    \ 'mode': 'passive',
-    \ 'active_filetypes': ['ruby', 'php', 'python'],
-    \ 'passive_filetypes': ['html', 'xml']
-\ }
 nmap <leader>st <esc>:SyntasticToggleMode<cr>
 nmap <leader>lo <esc>:lopen<cr>
 nmap <leader>lc <esc>:lclose<cr>
+map <silent><leader>jj <esc>:SyntasticCheck<cr>
+inoremap <silent><leader>jj <esc>:SyntasticCheck<cr>
 
-
-" jslint Or JShint
-let g:jslint_command = $VIMFILES.'/bin/jsl-0.3.0/jsl.exe'
-let g:jslint_command_options = '-nofilelisting -nocontext -nosummary -nologo -process'
-map <silent><leader>jj <esc>:call ToJSLint()<cr>
-inoremap <silent><leader>jj <esc>:call ToJSLint()<cr>
-function! ToJSLint()
-    let current_file = shellescape(expand('%:p'))
-    if !executable("node")
-        call JavascriptLint()
-    else
-        :SyntasticCheck
-    endif
-endfunc
+let g:syntastic_mode_map = { 
+    \ 'mode': 'passive',
+    \ 'active_filetypes': [],
+    \ 'passive_filetypes': []
+\ }
+" add checkers
+let g:syntastic_javascript_checkers = ['jsl', 'jshint']
+let g:syntastic_javascript_jsl_exec = $JSLBIN
+let g:syntastic_html_jshint_conf = "jshint"
 
 
 
