@@ -72,6 +72,7 @@ Plugin 'katosun2/imiku'
 Plugin 'katosun2/xml.vim'
 Plugin 'katosun2/vim-dict'
 Plugin 'katosun2/load_template'
+Plugin 'katosun2/tern_for_vim'
 
 Plugin 'honza/vim-snippets'
 
@@ -88,7 +89,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
 
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'sirver/ultisnips'
 
@@ -132,6 +132,7 @@ set wildmenu
 set scrolloff=5
 set cmdheight=5
 set showcmd
+set noshowmode
 set report=0
 
 

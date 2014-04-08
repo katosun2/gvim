@@ -146,11 +146,8 @@ let g:syntastic_javascript_jsl_exec = $JSLBIN
 let g:syntastic_html_jshint_conf = "jshint"
 
 
-
-
-
-
-
+" tern for vim
+let g:tern_show_argument_hints = "no_hold"
 
 
 
