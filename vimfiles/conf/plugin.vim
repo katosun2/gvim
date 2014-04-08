@@ -1,5 +1,8 @@
 " open browsers's lnk path
-let $BROWSERS = $VIM.'/browsers'
+if exists('*mkdir') && !isdirectory($BROWSERS)
+    sil! cal mkdir($BROWSERS, 'p')
+endif
+let $BROWSERS = $BROWSERS
 
 
 " modeliner

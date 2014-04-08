@@ -7,6 +7,7 @@ let $UNDOCACHE=$VIM."/.cache/undodir"
 let $BACKUPCACHE=$VIM."/.cache/backup"
 let $SWPCACHE=$VIM."/.cache/swp"
 let $VIEWCACHE=$VIM."/.cache/view"
+let $BROWSERS=$VIM."/.cache/browsers"
 
 
 " set leader 
