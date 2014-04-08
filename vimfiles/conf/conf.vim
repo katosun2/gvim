@@ -75,11 +75,6 @@ set statusline+=\ %r%m%8*%=\ %8*%-16{strftime(\"%Y-%m-%d\ %H:%M\")}\
 set statusline+=\ %5*©2014\ 
 
 
-" Omni menu colors
-hi Pmenu guifg=#CCCCCC guibg=#333333
-hi PmenuSel guifg=#49AF47 guibg=#413C41 gui=bold
-
-
 " 当前文件中快速查找光标下的单词
 nmap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
 
