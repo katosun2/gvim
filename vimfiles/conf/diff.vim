@@ -9,7 +9,7 @@
 "      History:
 "=============================================================================
 " set fileType syntax on
-au! BufRead,BufNewFile *.js, *.html,*.htm,*.less,*.css :sy on
+au BufRead,BufNewFile *.js,*.html,*.htm,*.less,*.css :sy on
 
 " defined browsers (e.g sg.lnk)
 "browsersIMiku.vim

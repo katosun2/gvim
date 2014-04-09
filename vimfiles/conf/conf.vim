@@ -6,7 +6,7 @@ if has("gui_running")
     set guioptions-=L       " hide left scroll  
     set guioptions-=r       " hide right scroll  
     set guioptions-=b       " hide bottom scroll  
-    set completeopt-=preview " hide preview
+    "set completeopt-=preview " hide preview
     
     " load gui lib
     let g:gvim_screen_lib = $VIMFILES.'/bin/lib/gvimfullscreen_x32.dll'
