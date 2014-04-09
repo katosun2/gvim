@@ -141,13 +141,15 @@ let g:syntastic_mode_map = {
     \ 'passive_filetypes': []
 \ }
 " add checkers
-let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 let g:syntastic_javascript_jsl_exec = $JSLBIN
-let g:syntastic_html_jshint_conf = "jshint"
+let g:syntastic_javascript_checkers = ['jsl', 'jshint']
+"let g:syntastic_html_jshint_conf = "jshint"
 
 
 " tern for vim
 let g:tern_show_argument_hints = "no_hold"
+nmap <leader>tr <esc>:TernRefs<cr>
+nmap <leader>tt <esc>:TernType<cr>
 
 
 

@@ -129,12 +129,6 @@ vmap <A-c> "*y
 imap <A-v> <ESC>"*p
 map <A-v> "*p
 
-"使窗口平分高宽
-"map <leader>wm <ESC><C-w>=
-
-"使当前窗口高度最大化
-"map <leader>wh <ESC>:res<cr>
-
 " 切换自动换行
 map <silent><leader>wp <esc>:set wrap!<cr>
 
@@ -159,6 +153,8 @@ nnoremap <leader>4 :set ft=php<CR>
 nnoremap <leader>5 :set ft=vim<CR>
 nnoremap <leader>6 :set ft=less<CR>
 nnoremap <leader>7 :set ft=smarty<CR>
+nnoremap <leader>8 :set ft=snippet<CR>
+nnoremap <leader>9 :set ft=markdown<CR>
 
 " 调用特殊功能方法
 map <F2> <ESC>:call g:SelectFunc()<CR>  
