@@ -316,7 +316,7 @@ endfunction
 
 " 中文编码转换 for win 
 function! g:TranCoding(str,to,from)
-    if has("win32") || has("win64") && exists("iconv") && v:lang == 'zh_CN.utf-8'
+    if exists("iconv") && v:lang == 'zh_CN.utf-8'
         let dialogtxt = iconv(a:str,a:to,a:from)
         return dialogtxt
     endif

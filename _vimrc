@@ -92,6 +92,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'sirver/ultisnips'
 
+Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 
 filetype plugin indent on
