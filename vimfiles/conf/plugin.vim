@@ -153,6 +153,12 @@ nmap <leader>tr <esc>:TernRefs<cr>
 nmap <leader>tt <esc>:TernType<cr>
 
 
+" Ag
+if !executable("ag")
+	let g:agprg=$AGBIN . " --column --smart-case"
+else
+	let g:agprg="ag --column --smart-case"
+endif
 
 
 
