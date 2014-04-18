@@ -161,7 +161,7 @@ let g:syntastic_mode_map = {
 " add checkers
 let g:syntastic_javascript_jsl_exec = $JSLBIN
 let g:syntastic_javascript_checkers = ['jsl', 'jshint']
-"let g:syntastic_html_jshint_conf = "jshint"
+let g:syntastic_html_jshint_conf = "jshint"
 
 
 " tern for vim
@@ -171,7 +171,7 @@ nmap <leader>tr <esc>:TernRefs<cr>
 nmap <leader>tt <esc>:TernType<cr>
 
 
-" Ag
+" Ag search
 if !executable("ag")
 	let g:agprg=$AGBIN . " --column --smart-case"
 else
@@ -184,10 +184,10 @@ let g:used_javascript_libs = 'jquery,requirejs'
 
 
 " doxygenToolkit for vim
-let g:DoxygenToolkit_briefTag_pre = "@desc "
+let g:DoxygenToolkit_briefTag_pre = ""
 let g:DoxygenToolkit_briefTag_funcName = "yes"
 let g:doxygenToolkit_authorName="katosun2"
-let g:doxygenToolkit_briefTag_funcName="yes"
+let g:doxygenToolkit_briefTag_funcName="no"
 map <silent><leader>jd <esc>:Dox<cr>
 inoremap <silent><leader>jd <esc>:Dox<cr>
 
