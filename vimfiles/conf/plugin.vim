@@ -184,7 +184,9 @@ let g:used_javascript_libs = 'jquery,requirejs'
 
 
 " doxygenToolkit for vim
-let g:DoxygenToolkit_briefTag_pre = ""
+let g:DoxygenToolkit_briefTag_pre = "@method "
+let g:DoxygenToolkit_paramTag_pre = "@param { } "
+let g:DoxygenToolkit_returnTag = "@return { } "
 let g:DoxygenToolkit_briefTag_funcName = "yes"
 let g:doxygenToolkit_authorName="katosun2"
 let g:doxygenToolkit_briefTag_funcName="no"
