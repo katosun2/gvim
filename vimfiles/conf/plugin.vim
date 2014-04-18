@@ -65,13 +65,18 @@ map <silent><F3> <ESC>:FencView<cr>
 let g:ycm_global_ycm_extra_conf=$VIM.'.ycm_extra_conf.py'
 let g:ycm_min_num_of_chars_for_completion = 2
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_semantic_triggers = {
-    \ 'c' : ['->', '.'],
-    \ 'cpp,objcpp' : ['->', '.', '::'],
-    \ 'ruby' : ['.', '::'],
-    \ 'php' : ['->', '::'],
-    \ 'javascript,vim,python,go' : ['.']
-\ }
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.'],
+  \   'objc' : ['->', '.'],
+  \   'ocaml' : ['.', '#'],
+  \   'cpp,objcpp' : ['->', '.', '::'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'ruby' : ['.', '::'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \ }
 
 
 " Ultisnips
@@ -160,6 +165,9 @@ else
 	let g:agprg="ag --column --smart-case"
 endif
 
+
+" javascript libs supports
+let g:used_javascript_libs = 'jquery,requirejs'
 
 
 "jsdoc.vim
