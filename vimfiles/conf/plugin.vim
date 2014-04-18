@@ -183,6 +183,11 @@ endif
 let g:used_javascript_libs = 'jquery,requirejs'
 
 
+" doxygenToolkit for vim
+let g:doxygenToolkit_authorName="Long"
+let g:doxygenToolkit_briefTag_funcName="yes"
+
+
 "jsdoc.vim
 let g:jsdoc_input_description = 0
 " @function and @name append to JsDoc.

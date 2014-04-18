@@ -76,6 +76,7 @@ Plugin 'katosun2/load_template'
 Plugin 'katosun2/tern_for_vim'
 
 Plugin 'heavenshell/vim-jsdoc'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
 
 Plugin 'othree/javascript-libraries-syntax.vim'
 
