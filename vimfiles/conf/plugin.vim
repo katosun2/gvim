@@ -78,6 +78,18 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 
+let g:ycm_filetype_blacklist = {
+	\ 'tagbar' : 1,
+	\ 'qf' : 1,
+	\ 'notes' : 1,
+	\ 'markdown' : 1,
+	\ 'unite' : 1,
+	\ 'text' : 1,
+	\ 'vimwiki' : 1,
+	\ 'pandoc' : 1,
+	\ 'mail' : 1
+\}
+
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger = "<c-k>"
@@ -154,6 +166,7 @@ let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 
 " tern for vim
 let g:tern_show_argument_hints = "no_hold"
+let g:tern_map_keys = 1
 nmap <leader>tr <esc>:TernRefs<cr>
 nmap <leader>tt <esc>:TernType<cr>
 

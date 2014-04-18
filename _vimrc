@@ -75,7 +75,8 @@ Plugin 'katosun2/vim-dict'
 Plugin 'katosun2/load_template'
 Plugin 'katosun2/tern_for_vim'
 
-Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'heavenshell/vim-jsdoc'
+
 Plugin 'othree/javascript-libraries-syntax.vim'
 
 Plugin 'honza/vim-snippets'
