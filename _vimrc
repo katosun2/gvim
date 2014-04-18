@@ -75,7 +75,6 @@ Plugin 'katosun2/vim-dict'
 Plugin 'katosun2/load_template'
 Plugin 'katosun2/tern_for_vim'
 
-Plugin 'heavenshell/vim-jsdoc'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 
 Plugin 'othree/javascript-libraries-syntax.vim'
@@ -94,12 +93,13 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'majutsushi/tagbar'
 
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'vim-scripts/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'sirver/ultisnips'
-
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
 
 filetype plugin indent on
 

@@ -184,13 +184,33 @@ let g:used_javascript_libs = 'jquery,requirejs'
 
 
 " doxygenToolkit for vim
-let g:doxygenToolkit_authorName="Long"
+let g:DoxygenToolkit_briefTag_pre = "@desc "
+let g:DoxygenToolkit_briefTag_funcName = "yes"
+let g:doxygenToolkit_authorName="katosun2"
 let g:doxygenToolkit_briefTag_funcName="yes"
+map <silent><leader>jd <esc>:Dox<cr>
+inoremap <silent><leader>jd <esc>:Dox<cr>
 
 
-"jsdoc.vim
-let g:jsdoc_input_description = 0
-" @function and @name append to JsDoc.
-let g:jsdoc_additional_descriptions = 1
-map <silent><leader>jd <esc>:JsDoc<cr>
-inoremap <silent><leader>jd <esc>:JsDoc<cr>
+" vimwiki
+let g:vimwiki_w32_dir_enc='utf-8'
+let g:vimwiki_camel_case = 0
+let g:vimwiki_hl_cb_checked = 1
+let g:vimwiki_menu = ''
+let g:vimwiki_folding = 0
+let g:vimwiki_CJK_length = 1
+let g:vimwiki_valid_html_tags='b,i,s,u,sub,sup,kbd,del,br,hr,div,code,h1'
+" map
+inoremap <leader>lt <esc>:VimwikiTable 
+nmap <leader>lt <esc>:VimwikiTable 
+nmap <silent><leader>tl <Plug>VimwikiToggleListItem
+vmap <silent><leader>tl <Plug>VimwikiToggleListItem
+nmap <silent><leader>th <Plug>Vimwiki2HTML
+nmap <silent><leader>ta <esc>:VimwikiAll2HTML<cr>
+nmap <silent><leader>tb <Plug>Vimwiki2HTMLBrowse
+nmap <silent><leader>wb <Plug>VimwikiGoBackLink
+nmap <silent><leader>wl <esc>:VimwikiGenerateLinks<cr>
+nmap <silent><leader>di <Plug>VimwikiDiaryIndex
+nmap <silent><leader>dl <Plug>VimwikiDiaryGenerateLinks
+nmap <silent><leader>dn <Plug>VimwikiDiaryNextDay
+nmap <silent><leader>dp <Plug>VimwikiDiaryPrevDay
