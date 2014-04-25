@@ -62,6 +62,7 @@ set selection=inclusive
 " load plugin vundle
 set nocompatible
 filetype off  
+filetype plugin indent on
 set rtp+=$VIMFILES/bundle/vundle
 call vundle#rc($VUNDLE)
 
@@ -100,8 +101,6 @@ Plugin 'vim-scripts/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'sirver/ultisnips'
-
-filetype plugin indent on
 
 
 " set color
@@ -144,8 +143,8 @@ set report=0
 
 
 " set font
-set guifont=Consolas:h13:cANSI 
-set guifontwide=Fixedsys:h13:cGB2312  
+set guifont=Consolas:h14:cANSI 
+set guifontwide=Fixedsys:h14:cGB2312  
 set linebreak 
 set nowrap
 set backspace=indent,eol,start 

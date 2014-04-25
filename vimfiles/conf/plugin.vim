@@ -203,16 +203,16 @@ let g:vimwiki_folding = 0
 let g:vimwiki_CJK_length = 1
 let g:vimwiki_valid_html_tags='b,i,s,u,sub,sup,kbd,del,br,hr,div,code,h1'
 " map
-inoremap <leader>lt <esc>:VimwikiTable 
-nmap <leader>lt <esc>:VimwikiTable 
-nmap <silent><leader>tl <Plug>VimwikiToggleListItem
-vmap <silent><leader>tl <Plug>VimwikiToggleListItem
-nmap <silent><leader>th <Plug>Vimwiki2HTML
-nmap <silent><leader>ta <esc>:VimwikiAll2HTML<cr>
-nmap <silent><leader>tb <Plug>Vimwiki2HTMLBrowse
-nmap <silent><leader>wb <Plug>VimwikiGoBackLink
-nmap <silent><leader>wl <esc>:VimwikiGenerateLinks<cr>
-nmap <silent><leader>di <Plug>VimwikiDiaryIndex
-nmap <silent><leader>dl <Plug>VimwikiDiaryGenerateLinks
-nmap <silent><leader>dn <Plug>VimwikiDiaryNextDay
-nmap <silent><leader>dp <Plug>VimwikiDiaryPrevDay
+inoremap <localleader>vt <esc>:VimwikiTable 
+nmap <localleader>lt <esc>:VimwikiTable 
+nmap <silent><localleader>vl <Plug>VimwikiToggleListItem
+nmap <silent><localleader>vh <Plug>Vimwiki2HTML
+nmap <silent><localleader>vth <esc>:VimwikiAll2HTML
+nmap <silent><localleader>vtb <Plug>Vimwiki2HTMLBrowse
+nmap <silent><localleader>vb <Plug>VimwikiGoBackLink
+nmap <silent><localleader>vl <esc>:VimwikiGenerateLinks
+nmap <silent><localleader>di <Plug>VimwikiDiaryIndex
+nmap <silent><localleader>dl <Plug>VimwikiDiaryGenerateLinks
+nmap <silent><localleader>dn <Plug>VimwikiDiaryNextDay
+nmap <silent><localleader>dp <Plug>VimwikiDiaryPrevDay
+au BufRead,BufNewFile,filetype *.vimwiki,VIMWIKI :sy on
