@@ -204,7 +204,7 @@ let g:vimwiki_CJK_length = 1
 let g:vimwiki_valid_html_tags='b,i,s,u,sub,sup,kbd,del,br,hr,div,code,h1'
 " map
 inoremap <localleader>vt <esc>:VimwikiTable 
-nmap <localleader>lt <esc>:VimwikiTable 
+nmap <localleader>vt <esc>:VimwikiTable 
 nmap <silent><localleader>vl <Plug>VimwikiToggleListItem
 nmap <silent><localleader>vh <Plug>Vimwiki2HTML
 nmap <silent><localleader>vth <esc>:VimwikiAll2HTML
