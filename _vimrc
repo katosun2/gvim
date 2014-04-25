@@ -62,7 +62,6 @@ set selection=inclusive
 " load plugin vundle
 set nocompatible
 filetype off  
-filetype plugin indent on
 set rtp+=$VIMFILES/bundle/vundle
 call vundle#rc($VUNDLE)
 
@@ -102,6 +101,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'sirver/ultisnips'
 
+filetype plugin indent on
 
 " set color
 color jellybeans
