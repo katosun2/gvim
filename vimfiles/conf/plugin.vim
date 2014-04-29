@@ -210,7 +210,7 @@ nmap <silent><localleader>vh <Plug>Vimwiki2HTML
 nmap <silent><localleader>vth <esc>:VimwikiAll2HTML
 nmap <silent><localleader>vtb <Plug>Vimwiki2HTMLBrowse
 nmap <silent><localleader>vb <Plug>VimwikiGoBackLink
-nmap <silent><localleader>vl <esc>:VimwikiGenerateLinks
+nmap <silent><localleader>vi <esc>:VimwikiGenerateLinks
 nmap <silent><localleader>di <Plug>VimwikiDiaryIndex
 nmap <silent><localleader>dl <Plug>VimwikiDiaryGenerateLinks
 nmap <silent><localleader>dn <Plug>VimwikiDiaryNextDay
