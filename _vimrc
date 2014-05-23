@@ -102,6 +102,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'sirver/ultisnips'
 
 filetype plugin indent on
+sy on
 
 " set color
 color jellybeans
@@ -242,6 +243,5 @@ set undodir=$UNDOCACHE
 source $VIM/vimfiles/conf/conf.vim
 source $VIM/vimfiles/conf/plugin.vim
 source $VIM/vimfiles/conf/diff.vim
-
 
 " vim: set et fdm=marker ff=dos sts=4 sw=4 ts=4 tw=78 : 
