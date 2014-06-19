@@ -144,8 +144,10 @@ set report=0
 
 
 " set font
-set guifont=Consolas:h14:cANSI 
-set guifontwide=Fixedsys:h14:cGB2312  
+set guifont=Consolas:h16:cANSI 
+"set guifont=Fixedsys:h16:cANSI 
+"set guifontwide=Fixedsys:h16:cGB2312  
+set guifontwide=Consolas:h16:cGB2312  
 set linebreak 
 set nowrap
 set backspace=indent,eol,start 
