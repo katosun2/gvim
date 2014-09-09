@@ -1,6 +1,6 @@
 " GUI
 if has("gui_running")
-    au GUIEnter * simalt ~x " max win
+    "au GUIEnter * simalt ~x " max win
     set guioptions-=m       "  hide menu  
     set guioptions-=T       " hide tools  
     set guioptions-=L       " hide left scroll  
