@@ -72,7 +72,7 @@ set statusline+=%5*\ %3p%%/%LL\
 set statusline+=%6*\ X:%2*%c\ %6*Y:%2*%l\ 
 set statusline+=%8*\ %4*%{g:ShowFen()}\ 
 set statusline+=\ %r%m%8*%=\ %8*%-16{strftime(\"%Y-%m-%d\ %H:%M\")}\ 
-set statusline+=\ %5*©2014\ 
+set statusline+=\ %5*©%{strftime(\"%Y\")}\ 
 
 
 " 当前文件中快速查找光标下的单词
