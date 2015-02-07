@@ -259,7 +259,6 @@ function! g:ChangMtoCR()
     exec ":%s//\r/e"   
 endf    
 
-
 " 折叠方式选择
 function! g:SelectNextFen()
     let l:foldname = &foldmethod

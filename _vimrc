@@ -102,7 +102,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'sirver/ultisnips'
 
 filetype plugin indent on
-
+sy on
 
 " set color
 color jellybeans
@@ -144,8 +144,10 @@ set report=0
 
 
 " set font
-set guifont=Consolas:h13:cANSI 
-set guifontwide=Fixedsys:h13:cGB2312  
+set guifont=Consolas:h16:cANSI 
+"set guifont=Fixedsys:h16:cANSI 
+"set guifontwide=Fixedsys:h16:cGB2312  
+set guifontwide=Consolas:h16:cGB2312  
 set linebreak 
 set nowrap
 set backspace=indent,eol,start 
@@ -243,6 +245,5 @@ set undodir=$UNDOCACHE
 source $VIM/vimfiles/conf/conf.vim
 source $VIM/vimfiles/conf/plugin.vim
 source $VIM/vimfiles/conf/diff.vim
-
 
 " vim: set et fdm=marker ff=dos sts=4 sw=4 ts=4 tw=78 : 
