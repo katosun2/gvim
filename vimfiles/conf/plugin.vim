@@ -62,10 +62,16 @@ map <silent><F3> <ESC>:FencView<cr>
 
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf=$VIM.'.ycm_extra_conf.py'
-let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_semantic_triggers =  {
+let g:ycm_global_ycm_extra_conf=$VIM.'/.ycm_extra_conf.py'
+let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_confirm_extra_conf=0
+let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_collect_identifiers_from_tags_files=1 
+let g:ycm_cache_omnifunc=0
+let g:ycm_complete_in_comments=1
+let g:ycm_use_ultisnips_completer=1
+set completeopt-=preview
+let g:ycm_semantic_triggers={
   \   'c' : ['->', '.'],
   \   'objc' : ['->', '.'],
   \   'ocaml' : ['.', '#'],
@@ -77,8 +83,8 @@ let g:ycm_semantic_triggers =  {
   \   'lua' : ['.', ':'],
   \   'erlang' : [':'],
   \ }
-
-let g:ycm_filetype_blacklist = {
+" block file format use ycm
+let g:ycm_filetype_blacklist={
 	\ 'tagbar' : 1,
 	\ 'qf' : 1,
 	\ 'notes' : 1,
@@ -86,9 +92,20 @@ let g:ycm_filetype_blacklist = {
 	\ 'unite' : 1,
 	\ 'text' : 1,
 	\ 'vimwiki' : 1,
+	\ 'html' : 1,
+	\ 'css' : 1,
 	\ 'pandoc' : 1,
 	\ 'mail' : 1
 \}
+
+
+" tern for vim
+let g:tern_show_argument_hints = "no"
+let g:tern_map_keys = 1
+nmap <leader>tr <esc>:TernRefs<cr>
+nmap <leader>tt <esc>:TernType<cr>
+nmap <leader>td <esc>:TernDef<cr>
+nmap <leader>tn <esc>:TernRename<cr>
 
 
 " Ultisnips
@@ -132,13 +149,12 @@ let g:ctrlp_custom_ignore = {
 
 
 " Tagbar
-let g:tagbar_ctags_bin = $VIMFILES.'/bin/lib/ctags.exe'
-let g:tagbar_type_javascript = {
-    \ 'ctagsbin' : $VIMFILES.'/bin/doctorjs/bin/jsctags.cmd'
-\ }
-imap <F10> <esc>:Tagbar<cr>
-nmap <F10> :Tagbar<cr>
-
+"let g:tagbar_ctags_bin = $VIMFILES.'/bin/lib/ctags.exe'
+"let g:tagbar_type_javascript = {
+    "\ 'ctagsbin' : $VIMFILES.'/bin/doctorjs/bin/jsctags.cmd'
+"\ }
+"imap <F10> <esc>:Tagbar<cr>
+"nmap <F10> :Tagbar<cr>
 
 " syntastic
 let g:syntastic_check_on_open = 0
@@ -162,13 +178,6 @@ let g:syntastic_mode_map = {
 let g:syntastic_javascript_jsl_exec = $JSLBIN
 let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 let g:syntastic_html_jshint_conf = "jshint"
-
-
-" tern for vim
-let g:tern_show_argument_hints = "no_hold"
-let g:tern_map_keys = 1
-nmap <leader>tr <esc>:TernRefs<cr>
-nmap <leader>tt <esc>:TernType<cr>
 
 
 " Ag search
