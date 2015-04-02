@@ -5,3 +5,5 @@
 	* fis-parser-less v0.1.2
 	* fis-parser-marked v0.0.5
 
+window系统，将node_modules/fis/.bin的绝对路径加入到环境变量中
+

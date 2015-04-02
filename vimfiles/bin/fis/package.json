@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "fis-parser-less": "^0.1.2",
-    "fis-postpackager-simple": "0.0.23"
+    "fis-postpackager-simple": "0.0.23",
+    "fis-parser-marked": "0.0.5"
   }
 }
