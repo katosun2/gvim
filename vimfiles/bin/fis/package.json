@@ -1,0 +1,25 @@
+{
+  "name": "fis-built",
+  "version": "0.0.1",
+  "description": "fis前端项目自动化构建发布",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://"
+  },
+  "keywords": [
+    "fis"
+  ],
+  "author": "Ryu",
+  "license": "MIT",
+  "dependencies": {
+    "fis": "^1.9.11"
+  },
+  "devDependencies": {
+    "fis-parser-less": "^0.1.2",
+    "fis-postpackager-simple": "0.0.23"
+  }
+}
