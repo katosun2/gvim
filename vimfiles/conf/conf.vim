@@ -9,48 +9,48 @@ if has("gui_running")
     "set completeopt-=preview " hide preview
     
     " load gui lib
-    let g:gvim_screen_lib = $VIMFILES.'/bin/lib/gvimfullscreen_x32.dll'
+    "let g:gvim_screen_lib = $VIMFILES.'/bin/lib/gvimfullscreen_x32.dll'
 
     " full win 
-    nmap <F11> <ESC>:call ToggleFullScreen()<CR>   
+    "nmap <F11> <ESC>:call ToggleFullScreen()<CR>   
     " to TOP
-    nmap <silent><leader>T <esc>:call SwitchVimTopMostMode()<cr>
+    "nmap <silent><leader>T <esc>:call SwitchVimTopMostMode()<cr>
     " add alpha
-    nmap <silent><leader>A <esc>:call SetAlpha(25)<cr>
+    "nmap <silent><leader>A <esc>:call SetAlpha(25)<cr>
     " dec alpha
-    nmap <silent><leader>a <esc>:call SetAlpha(-25)<cr>
+    "nmap <silent><leader>a <esc>:call SetAlpha(-25)<cr>
 
     " full fun
-    function! ToggleFullScreen()
-        call libcallnr(g:gvim_screen_lib, 'ToggleFullScreen', 1)
-    endfunction
+    "function! ToggleFullScreen()
+        "call libcallnr(g:gvim_screen_lib, 'ToggleFullScreen', 1)
+    "endfunction
 
      " alpha
-     let g:VimAlpha = 245
-     function! SetAlpha(alpha)
-         let g:VimAlpha = g:VimAlpha + a:alpha
-         if g:VimAlpha < 0
-             let g:VimAlpha = 15 
-         endif
-         if g:VimAlpha > 255
-             let g:VimAlpha = 255
-         endif
-         call libcallnr(g:gvim_screen_lib, 'SetAlpha', g:VimAlpha)
-     endfunction
+     "let g:VimAlpha = 245
+     "function! SetAlpha(alpha)
+         "let g:VimAlpha = g:VimAlpha + a:alpha
+         "if g:VimAlpha < 0
+             "let g:VimAlpha = 15 
+         "endif
+         "if g:VimAlpha > 255
+             "let g:VimAlpha = 255
+         "endif
+         "call libcallnr(g:gvim_screen_lib, 'SetAlpha', g:VimAlpha)
+     "endfunction
 
      " set top
-     let g:VimTopMost = 0
-     function! SwitchVimTopMostMode()
-         if g:VimTopMost == 0
-             let g:VimTopMost = 1
-         else
-             let g:VimTopMost = 0
-         endif
-         call libcallnr(g:gvim_screen_lib, 'EnableTopMost', g:VimTopMost)
-     endfunction
+     "let g:VimTopMost = 0
+     "function! SwitchVimTopMostMode()
+         "if g:VimTopMost == 0
+             "let g:VimTopMost = 1
+         "else
+             "let g:VimTopMost = 0
+         "endif
+         "call libcallnr(g:gvim_screen_lib, 'EnableTopMost', g:VimTopMost)
+     "endfunction
 
     " default alpha
-    autocmd GUIEnter * call libcallnr(g:gvim_screen_lib, 'SetAlpha', g:VimAlpha)
+    "autocmd GUIEnter * call libcallnr(g:gvim_screen_lib, 'SetAlpha', g:VimAlpha)
  endif
 
 " rember

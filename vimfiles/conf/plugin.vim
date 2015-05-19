@@ -92,7 +92,6 @@ let g:ycm_filetype_blacklist={
 	\ 'unite' : 1,
 	\ 'text' : 1,
 	\ 'vimwiki' : 1,
-	\ 'html' : 1,
 	\ 'css' : 1,
 	\ 'pandoc' : 1,
 	\ 'mail' : 1
