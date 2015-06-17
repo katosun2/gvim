@@ -10,6 +10,7 @@ let $VIEWCACHE=$VIM."/.cache/view"
 let $BROWSERS=$VIM."/.cache/browsers"
 let $JSLBIN=$VIMFILES.'/bin/jsl-0.3.0/jsl.exe'
 let $AGBIN=$VIMFILES.'/bin/lib/ag.exe'
+let $MRU=$VIM."/.cache/mru"
 
 
 " set leader 
@@ -101,6 +102,8 @@ Plugin 'vim-scripts/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'sirver/ultisnips'
+
+Plugin 'yegappan/mru'
 
 filetype plugin indent on
 sy on
