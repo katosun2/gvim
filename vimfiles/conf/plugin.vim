@@ -187,6 +187,16 @@ else
 endif
 
 
+" MRU
+if exists('*mkdir') && !isdirectory($MRU)
+    sil! cal mkdir($MRU, 'p')
+endif
+let MRU_File = $MRU . '/_vim_mru_files'
+let MRU_Max_Entries = 10
+let MRU_Include_Files = '\.js$\|\.css$\|\.html$\|\.htm$\|\.php$\|\.json$'
+let MRU_Window_Height = 10
+
+
 " javascript libs supports
 let g:used_javascript_libs = 'jquery,requirejs'
 
