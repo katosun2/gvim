@@ -10,7 +10,7 @@ vim74
 backup/*
 swp/*
 my_plugin
-vimwiki_html/
+vimwiki/
 .ycm_extra_conf.pyc
 vimfiles/bin/nodejs
 vimfiles/bin/phantomjs
