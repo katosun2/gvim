@@ -2,10 +2,10 @@
 "     FileName: diff.vim
 "         Desc: config diff 
 "       Creator: Long
-"      Version: 1.0
+"      Version: 1.0.1
 "      $Author: katosun2 $
 "        $Date:  $
-"   LastChange: 2013-10-11 23:13:43
+"   LastChange: 2015-06-25 00:09:00
 "      History:
 "=============================================================================
 " set fileType syntax on
@@ -19,10 +19,14 @@ let g:htdocs = ["D:\\templates\\","D:\\work\\","D:\\sinaneko\\5\\","D:\\aawwwroo
 let g:servurls = ["http://127.0.0.1:1108/","http://127.0.0.1:1105/","http://127.0.0.1:1115/","http://127.0.0.1/","http://127.0.0.1:1015/"]
 
 " 多个维基项目的配置
-let g:vimwiki_list = [{'path': 'E:/360Yun/vimwiki/',
-      \ 'path_html': '$VIM/vimwiki_html/',
-      \ 'template_ext' : '.htm',
-      \ 'template_path': '$VIMFILES/vimwiki_template/',
-      \ 'template_default': 'default_template',
+let g:vimwiki_list = [{'path': '$VIM/vimwiki/default/',
+      \ 'path_html': '$VIM/vimwiki/default/_html/',
+      \ 'template_ext' : '.tpl',
+      \ 'template_path': '$VIMFILES/bundle/imiku/vimwiki_tpl/',
+      \ 'template_default': 'default',
+	  \ 'syntax': 'default',
+	  \ 'ext': '.md',
       \ 'diary_link_count': 5},
-      \ {'path': 'Z:\'}]
+      \ {'path': '$VIM/vimwiki/doku/',
+	  \ 'syntax': 'doku',
+	  \ 'ext': '.md'}]

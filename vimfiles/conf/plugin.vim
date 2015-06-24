@@ -220,17 +220,3 @@ let g:vimwiki_menu = ''
 let g:vimwiki_folding = 0
 let g:vimwiki_CJK_length = 1
 let g:vimwiki_valid_html_tags='b,i,s,u,sub,sup,kbd,del,br,hr,div,code,h1'
-" map
-inoremap <localleader>vt <esc>:VimwikiTable 
-nmap <localleader>vt <esc>:VimwikiTable 
-nmap <silent><localleader>vl <Plug>VimwikiToggleListItem
-nmap <silent><localleader>vh <Plug>Vimwiki2HTML
-nmap <silent><localleader>vth <esc>:VimwikiAll2HTML
-nmap <silent><localleader>vtb <Plug>Vimwiki2HTMLBrowse
-nmap <silent><localleader>vb <Plug>VimwikiGoBackLink
-nmap <silent><localleader>vi <esc>:VimwikiGenerateLinks
-nmap <silent><localleader>di <Plug>VimwikiDiaryIndex
-nmap <silent><localleader>dl <Plug>VimwikiDiaryGenerateLinks
-nmap <silent><localleader>dn <Plug>VimwikiDiaryNextDay
-nmap <silent><localleader>dp <Plug>VimwikiDiaryPrevDay
-au BufRead,BufNewFile,filetype *.vimwiki,VIMWIKI :sy on

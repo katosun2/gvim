@@ -21,3 +21,5 @@ vimfiles/bin/git
 vimfiles/bin/MinGW
 vimfiles/bundle
 vimfiles/conf/diff.vim
+vimfiles/bin/fis/
+vimfiles/bin/syncthing/

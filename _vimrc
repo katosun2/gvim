@@ -74,7 +74,7 @@ Plugin 'katosun2/imiku'
 Plugin 'katosun2/xml.vim'
 Plugin 'katosun2/vim-dict'
 Plugin 'katosun2/load_template'
-
+Plugin 'katosun2/vimwiki'
 Plugin 'katosun2/tern_for_vim'
 
 Plugin 'vim-scripts/DoxygenToolkit.vim'
@@ -88,22 +88,19 @@ Plugin 'Shougo/vimshell.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
 
 Plugin 'mbbill/fencview'
 
 Plugin 'tpope/vim-surround'
 
-"Plugin 'majutsushi/tagbar'
-
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 
-Plugin 'vim-scripts/vimwiki'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
-Plugin 'sirver/ultisnips'
-
 Plugin 'yegappan/mru'
+
+Plugin 'sirver/ultisnips'
+Plugin 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 sy on
