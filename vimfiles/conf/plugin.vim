@@ -49,8 +49,8 @@ map <silent><leader>uu <ESC>:NERDTree<cr>
 
 
 " NERD_commenter && authorinfo
-let g:vimrc_author='奇迹方舟'   
-let g:vimrc_email='neko@imiku.com'   
+let g:vimrc_author='Ryu'   
+let g:vimrc_email='ryu@imiku.com'   
 let g:vimrc_homepage='http://www.imiku.com' 
 map <leader>my <ESC>:AuthorInfoDetect<cr>   
 imap <leader>my <ESC>:AuthorInfoDetect<cr>   
