@@ -76,6 +76,7 @@ Plugin 'katosun2/vim-dict'
 Plugin 'katosun2/load_template'
 Plugin 'katosun2/vimwiki'
 Plugin 'katosun2/tern_for_vim'
+Plugin 'katosun2/imiku-vim-less'
 
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 

@@ -244,13 +244,6 @@ func! g:SetRightMouse()
 	endif
 endfunc
 
-" 打开自动编译less
-func! g:OpenComileLess()
-	autocmd! BufWritePost,FileWritePost *.less call g:CompileLess()
-	echo "Open auto complie less to css succ! ^_^"
-endfunc
-
-
 " ^m替换成CR,这里的“^M”要使用编辑模式下“CTRL-V CTRL-M”生成，而不是直接键入“^M”。
 " c:confirm，每次替換前會詢問。 e:不顯示 error。 g:globe，不詢問，整行替換。 i:ignore 不分大小寫。 
 function! g:ChangMtoCR()
