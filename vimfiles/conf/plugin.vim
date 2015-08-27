@@ -19,13 +19,9 @@ let g:xml_createdocument = 0
 
 
 " complie Less
-" let g:less_complie = 0
-" let g:less_opt = 2
-" map <silent><leader>l1 <esc>:let g:less_opt=1<cr>:echo 'Done! now is min && mutline ^_^'<cr>
-" map <silent><leader>l2 <esc>:let g:less_opt=2<cr>:echo 'Done! now is min && inline ^_^'<cr>
-" map <silent><leader>l3 <esc>:let g:less_opt=3<cr>:echo 'Done! now is base ^_^'<cr>
-" map <f6> <esc>:call g:OpenComileLess()<cr>
-" inoremap <f6> <esc>:call g:OpenComileLess()<cr>
+let g:lessc_node_cmd = "node"
+let g:lessc_source_open = 1
+map <f6> <esc>:call g:OpenComileLess()<cr>
 
 
 " AjaxMin comparess css/js 
