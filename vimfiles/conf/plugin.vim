@@ -20,6 +20,7 @@ let g:xml_createdocument = 0
 
 " complie Less
 let g:lessc_node_cmd = "node"
+"let g:lessc_cmd = "node"
 let g:lessc_source_open = 1
 map <f6> <esc>:call g:OpenComileLess()<cr>
 
