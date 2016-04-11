@@ -15,8 +15,8 @@
 "browsersIMiku.vim
 let g:htdoc_f5_open = 0
 let g:htdoc_f5 = ["D:\\templates\\","http://127.0.0.1:81/"]
-let g:htdocs = ["D:\\templates\\","D:\\work\\","D:\\sinaneko\\5\\","D:\\aawwwroot\\wwwroot\\","D:\\yidmcom\\"]
-let g:servurls = ["http://127.0.0.1:1108/","http://127.0.0.1:1105/","http://127.0.0.1:1115/","http://127.0.0.1/","http://127.0.0.1:1015/"]
+let g:htdocs = ["F:\\work\\iletao\\904Development\\4.01SourceCode\\trunk\\appweb\\", "F:\\work\\lab\\", "F:\\work\\iletao\\"]
+let g:servurls = ["http://127.0.0.1:3000/", "http://127.0.0.1:3000/", "http://127.0.0.1:3000/"]
 
 " 多个维基项目的配置
 let g:vimwiki_list = [{'path': '$VIM/vimwiki/default/',

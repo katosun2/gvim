@@ -9,6 +9,7 @@ let $SWPCACHE=$VIM."/.cache/swp"
 let $VIEWCACHE=$VIM."/.cache/view"
 let $BROWSERS=$VIM."/.cache/browsers"
 let $JSLBIN=$VIMFILES.'/bin/jsl-0.3.0/jsl.exe'
+let $JSHINT=$VIMFILES.'/bin/package/nodejs/node_modules/.bin/jshint.cmd'
 let $AGBIN=$VIMFILES.'/bin/lib/ag.exe'
 let $MRU=$VIM."/.cache/mru"
 
@@ -99,6 +100,7 @@ Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 
 Plugin 'yegappan/mru'
+
 
 Plugin 'sirver/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
@@ -198,6 +200,10 @@ hi Folded guibg=#282828 guifg=#CE542E
 hi FoldColumn guibg=#282828 guifg=#CE542E
 
 
+" set tab text mark
+set guioptions-=e
+
+
 " set global info
 set viminfo+=!
 set sessionoptions-=curdir
@@ -241,7 +247,6 @@ if exists('*mkdir') && !isdirectory($UNDOCACHE)
     sil! cal mkdir($UNDOCACHE, 'p')
 endif
 set undodir=$UNDOCACHE
-
 
 "load my config
 source $VIM/vimfiles/conf/conf.vim

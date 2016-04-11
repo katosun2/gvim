@@ -171,9 +171,13 @@ let g:syntastic_mode_map = {
     \ 'passive_filetypes': []
 \ }
 " add checkers
-let g:syntastic_javascript_jsl_exec = $JSLBIN
-let g:syntastic_javascript_checkers = ['jsl', 'jshint']
-let g:syntastic_html_jshint_conf = "jshint"
+"let g:syntastic_javascript_jsl_exec = $JSLBIN
+"let g:syntastic_javascript_checkers = ['jsl']
+
+let g:syntastic_javascript_jshint_exec = $JSHINT
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_jshint_args = '--config "' . $VIM . '/.jshintrc"'
+"let g:syntastic_html_jshint_conf = "jshint"
 
 
 " Ag search
