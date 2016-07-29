@@ -89,24 +89,24 @@ map <leader>oo <ESC><C-w><C-f>
 map <silent><A-m> <ESC>:set ma!<cr>
 map <silent><A-n> <ESC>:set ro!<cr>
 
-"直接复制当前行
-vmap <C-Down> <ESC>:move '>+1<cr>gv
-imap <A-Down> <ESC>yyp
-map <A-Down> <ESC>yyp
-vmap <A-Down> <ESC>yyp
-imap <A-Up> <ESC>yyP
-map <A-Up> <ESC>yyP
-vmap <A-Up> <ESC>yyP
+" 用方向键直接复制当前行
+" vmap <C-Down> <ESC>:move '>+1<cr>gv
+" imap <A-Down> <ESC>yyp
+" map <A-Down> <ESC>yyp
+" vmap <A-Down> <ESC>yyp
+" imap <A-Up> <ESC>yyP
+" map <A-Up> <ESC>yyP
+" vmap <A-Up> <ESC>yyP
 
 "移动当前行
-nmap <C-Down> <ESC>:<C-u>move .+1<cr>
-nmap <C-Up> <ESC>:<C-u>move .-2<cr>
-"imap <C-A-Down> <C-oddd>:<C-u>move .+4<cr>
-"imap <C-A-Up> <C-o>:<C-u>move .-1<cr>
-imap <C-Down> <ESC>:move '>+1<cr>gv
-vmap <C-Down> <ESC>:move '>+1<cr>gv
-imap <C-Up> <ESC>:move '<-2<cr>gv
-vmap <C-Up> <ESC>:move '<-2<cr>gv
+" nmap <C-Down> <ESC>:<C-u>move .+1<cr>
+" nmap <C-Up> <ESC>:<C-u>move .-2<cr>
+" imap <C-A-Down> <C-oddd>:<C-u>move .+4<cr>
+" imap <C-A-Up> <C-o>:<C-u>move .-1<cr>
+" imap <C-Down> <ESC>:move '>+1<cr>gv
+" vmap <C-Down> <ESC>:move '>+1<cr>gv
+" imap <C-Up> <ESC>:move '<-2<cr>gv
+" vmap <C-Up> <ESC>:move '<-2<cr>gv
 
 "c-z,a-z转为esc
 imap <C-z> <ESC>:w<cr>

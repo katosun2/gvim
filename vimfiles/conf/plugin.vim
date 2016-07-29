@@ -5,35 +5,31 @@ endif
 let $BROWSERS = $BROWSERS
 
 
+" Load Template
+let g:template_path = $VIMFILES.'/bundle/imiku/template/'
+map <F8> <ESC>:LoadTemplate<cr>
+
+
 " modeliner
 let g:Modeliner_format = 'et fdm= ff= sts= sw= ts= tw='
 map <silent><leader>sm <esc><s-g>o<esc>:Modeliner<cr>
 
-
-" calendar
-map <F9> :Calendar<cr>
-
-
-" html.xml
-let g:xml_createdocument = 0
-
-
-" complie Less
-let g:lessc_node_cmd = "node"
-"let g:lessc_cmd = "node"
-let g:lessc_source_open = 1
-map <f6> <esc>:call g:OpenComileLess()<cr>
+" MRU
+if exists('*mkdir') && !isdirectory($MRU)
+    sil! cal mkdir($MRU, 'p')
+endif
+let MRU_File = $MRU . '/_vim_mru_files'
+let MRU_Max_Entries = 10
+let MRU_Include_Files = '\.vue$\|\.scss$\|\.opf$\|\.js$\|\.jsx$\|\.ejs$\|\.css$\|\.html$\|\.htm$\|\.php$\|\.json$'
+let MRU_Window_Height = 10
 
 
-" AjaxMin comparess css/js 
-let g:ajaxmin_cmd = $VIMFILES.'/bin/Microsoft-Ajax-Minifier-4/AjaxMin.exe'
-let g:ajaxmin_cmd_jsopt = '-clobber:true -term'
-let g:ajaxmin_cmd_cssopt = '-clobber:true -term -comments:hacks'
-
-
-" Load Template
-let g:template_path = $VIMFILES.'/bundle/imiku/template/'
-map <F8> <ESC>:LoadTemplate<cr>
+" Ag search
+if !executable("ag")
+	let g:agprg=$AG . " --column --smart-case"
+else
+	let g:agprg="ag --column --smart-case"
+endif
 
 
 " NERDTree
@@ -58,13 +54,26 @@ let g:fencview_autodetect=0
 map <silent><F3> <ESC>:FencView<cr>
 
 
+" Ultisnips
+let g:UltiSnipsExpandTrigger = "<c-k>"
+let g:UltiSnipsJumpForwardTrigger = "<c-l>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-h>"
+let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsSnippetsDir = $VIMFILES."/bundle/imiku/UltiSnips"
+
+" If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
+let g:snips_author_email = "neko@imiku.com"
+let g:snips_author = "katosun2"
+
+
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf=$VIM.'/.ycm_extra_conf.py'
 let g:ycm_min_num_of_chars_for_completion=2
 let g:ycm_confirm_extra_conf=0
 let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_collect_identifiers_from_tags_files=1 
-let g:ycm_cache_omnifunc=0
+let g:ycm_cache_omnifunc=1
 let g:ycm_complete_in_comments=1
 let g:ycm_use_ultisnips_completer=1
 set completeopt-=preview
@@ -95,27 +104,19 @@ let g:ycm_filetype_blacklist={
 \}
 
 
-" tern for vim
-let g:tern_show_argument_hints = "no"
-let g:tern_map_keys = 1
-nmap <leader>tr <esc>:TernRefs<cr>
-nmap <leader>tt <esc>:TernType<cr>
-nmap <leader>td <esc>:TernDef<cr>
-nmap <leader>tn <esc>:TernRename<cr>
+" doxygenToolkit for vim
+let g:DoxygenToolkit_briefTag_pre = "@method "
+let g:DoxygenToolkit_paramTag_pre = "@param { }"
+let g:DoxygenToolkit_returnTag = "@return { } "
+let g:DoxygenToolkit_briefTag_funcName = "yes"
+let g:doxygenToolkit_authorName = "Ryu"
+let g:doxygenToolkit_briefTag_funcName="no"
+map <silent><leader>jd <esc>:Dox<cr>
+inoremap <silent><leader>jd <esc>:Dox<cr>
 
 
-" Ultisnips
-let g:UltiSnipsExpandTrigger = "<c-k>"
-let g:UltiSnipsJumpForwardTrigger = "<c-l>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-h>"
-let g:UltiSnipsUsePythonVersion = 2
-let g:UltiSnipsSnippetsDir = $VIMFILES."/bundle/imiku/UltiSnips"
-
-" If you want :UltiSnipsEdit to split your window.
-"let g:UltiSnipsEditSplit="vertical"
-"
-let g:snips_author_email = "neko@imiku.com"
-let g:snips_author = "katosun2"
+" calendar
+map <F9> :Calendar<cr>
 
 
 " CtriP
@@ -135,7 +136,7 @@ endif
 let g:ctrlp_max_depth = 5
 let g:ctrlp_max_history = 0
 let g:ctrlp_mruf_max = 250
-let g:ctrlp_mruf_include = '\.html\|\.less\|\.css|\.js$\|\.php$'
+let g:ctrlp_mruf_include = '\.html$\|\.less$\|\.css$\|\.scss$\|\.vue$\|\.js$\|\.jsx$\|\.ejs$\|\.php$'
 set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
@@ -143,14 +144,6 @@ let g:ctrlp_custom_ignore = {
     \ 'link': '',
 \ }
 
-
-" Tagbar
-"let g:tagbar_ctags_bin = $VIMFILES.'/bin/lib/ctags.exe'
-"let g:tagbar_type_javascript = {
-    "\ 'ctagsbin' : $VIMFILES.'/bin/doctorjs/bin/jsctags.cmd'
-"\ }
-"imap <F10> <esc>:Tagbar<cr>
-"nmap <F10> :Tagbar<cr>
 
 " syntastic
 let g:syntastic_check_on_open = 0
@@ -170,54 +163,38 @@ let g:syntastic_mode_map = {
     \ 'active_filetypes': [],
     \ 'passive_filetypes': []
 \ }
-" add checkers
-"let g:syntastic_javascript_jsl_exec = $JSLBIN
-"let g:syntastic_javascript_checkers = ['jsl']
 
-let g:syntastic_javascript_jshint_exec = $JSHINT
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_javascript_jshint_args = '--config "' . $VIM . '/.jshintrc"'
-"let g:syntastic_html_jshint_conf = "jshint"
+" add jshint checkers
+"if !executable('jshint')
+	"let g:syntastic_javascript_jshint_exec = $JSHINT
+"else
+	"let g:syntastic_javascript_jshint_exec = 'jshint'
+"endif
+"let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_javascript_jshint_args = '--config "' . $VIM . '/.jshintrc"'
 
-
-" Ag search
-if !executable("ag")
-	let g:agprg=$AGBIN . " --column --smart-case"
+" add eslint checkers
+if !executable('eslint')
+    let g:syntastic_javascript_eslint_exec = $JSHINT
 else
-	let g:agprg="ag --column --smart-case"
+    let g:syntastic_javascript_eslint_exec = 'eslint'
+endif
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_args = '--no-eslintrc --config "' . $VIM . '/.eslintrc"'
+
+
+" vim-jsx
+let g:jsx_ext_required = 0
+
+
+" AjaxMin comparess css/js 
+if !executable('jshint')
+	let g:ajaxmin_cmd = 'AjaxMin'
+else
+	let g:ajaxmin_cmd = $AJAXMIN
 endif
 
+let g:ajaxmin_cmd_jsopt = '-clobber:true -term'
+let g:ajaxmin_cmd_cssopt = '-clobber:true -term -comments:hacks'
 
-" MRU
-if exists('*mkdir') && !isdirectory($MRU)
-    sil! cal mkdir($MRU, 'p')
-endif
-let MRU_File = $MRU . '/_vim_mru_files'
-let MRU_Max_Entries = 10
-let MRU_Include_Files = '\.js$\|\.css$\|\.html$\|\.htm$\|\.php$\|\.json$'
-let MRU_Window_Height = 10
-
-
-" javascript libs supports
-let g:used_javascript_libs = 'jquery,requirejs'
-
-
-" doxygenToolkit for vim
-let g:DoxygenToolkit_briefTag_pre = "@method "
-let g:DoxygenToolkit_paramTag_pre = "@param { } "
-let g:DoxygenToolkit_returnTag = "@return { } "
-let g:DoxygenToolkit_briefTag_funcName = "yes"
-let g:doxygenToolkit_authorName="katosun2"
-let g:doxygenToolkit_briefTag_funcName="no"
-map <silent><leader>jd <esc>:Dox<cr>
-inoremap <silent><leader>jd <esc>:Dox<cr>
-
-
-" vimwiki
-let g:vimwiki_w32_dir_enc='utf-8'
-let g:vimwiki_camel_case = 0
-let g:vimwiki_hl_cb_checked = 1
-let g:vimwiki_menu = ''
-let g:vimwiki_folding = 0
-let g:vimwiki_CJK_length = 1
-let g:vimwiki_valid_html_tags='b,i,s,u,sub,sup,kbd,del,br,hr,div,code,h1'
+" vim: set noet fdm=manual ff=dos sts=4 sw=4 ts=4 tw=78 : 

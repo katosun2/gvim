@@ -1,18 +1,20 @@
 " set vim path
-let $VIMFILES=$VIM.'/vimfiles'
-let $VIMRC=$VIM.'/_vimrc'
-let $VIMHOME=$vim.'/vim73'
-let $VUNDLE=$VIMFILES."/bundle"
-let $UNDOCACHE=$VIM."/.cache/undodir"
-let $BACKUPCACHE=$VIM."/.cache/backup"
-let $SWPCACHE=$VIM."/.cache/swp"
-let $VIEWCACHE=$VIM."/.cache/view"
-let $BROWSERS=$VIM."/.cache/browsers"
-let $JSLBIN=$VIMFILES.'/bin/jsl-0.3.0/jsl.exe'
-let $JSHINT=$VIMFILES.'/bin/package/nodejs/node_modules/.bin/jshint.cmd'
-let $AGBIN=$VIMFILES.'/bin/lib/ag.exe'
-let $MRU=$VIM."/.cache/mru"
+let $VIMFILES = $VIM.'/vimfiles'
+let $VIMRC = $VIM.'/_vimrc'
+let $VIMHOME = $vim.'/vim74'
+let $VUNDLE = $VIMFILES."/bundle"
+let $UNDOCACHE = $VIM."/.cache/undodir"
+let $BACKUPCACHE = $VIM."/.cache/backup"
+let $SWPCACHE = $VIM."/.cache/swp"
+let $VIEWCACHE = $VIM."/.cache/view"
+let $MRU = $VIM."/.cache/mru"
+let $BROWSERS=$VIM."/browsers"
 
+" TODO
+" let $AG=$VIMFILES.'/bin/lib/ag.exe'
+let $NODEMODULES = 'H:/bin/node_modules/.bin'
+let $JSHINT = $NODEMODULES.'/jshint.cmd'
+let $AJAXMIN = ''
 
 " set leader 
 let mapleader=","
@@ -67,41 +69,35 @@ filetype off
 set rtp+=$VIMFILES/bundle/vundle
 call vundle#rc($VUNDLE)
 
+
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 
-Plugin 'katosun2/jellybeans.vim'
 Plugin 'katosun2/imiku'
-Plugin 'katosun2/xml.vim'
-Plugin 'katosun2/vim-dict'
+Plugin 'katosun2/jellybeans.vim'
+Plugin 'katosun2/vim-browsers'
 Plugin 'katosun2/load_template'
-Plugin 'katosun2/vimwiki'
-Plugin 'katosun2/tern_for_vim'
-Plugin 'katosun2/imiku-vim-less'
 
-Plugin 'vim-scripts/DoxygenToolkit.vim'
-
-Plugin 'othree/javascript-libraries-syntax.vim'
-
-Plugin 'honza/vim-snippets'
+Plugin 'yegappan/mru'
+Plugin 'mbbill/fencview'
+Plugin 'vim-scripts/Modeliner'
+Plugin 'tpope/vim-surround'
 
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 
-Plugin 'mbbill/fencview'
-
-Plugin 'tpope/vim-surround'
-
+Plugin 'pangloss/vim-javascript'
+Plugin 'mattn/webapi-vim'
+Plugin 'mxw/vim-jsx'
+ 
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
-
-Plugin 'yegappan/mru'
-
-
+ 
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'sirver/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 
