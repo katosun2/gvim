@@ -1,13 +1,28 @@
 {
-	"libs": [
-		"browser",
-		"jquery"
-			],
-		"loadEagerly": [],
-		"plugins": {
-			"requirejs": {
-				"baseURL": "./",
-				"paths": {}
-			}
-		}
+  "ecmaVersion": 6,
+  "libs": [
+    "browser",
+    "jquery"
+  ],
+  "loadEagerly": [
+	  "./js/lib/**/*.js"
+  ],
+  "dontLoad": [
+	  "./node_modules"
+  ],
+  "plugins": {
+	"requirejs": {
+	   "baseURL": "./",
+	   "paths": {}
+	},
+    "complete_strings": {
+      "maxLength": 15
+    },
+    "node": {},
+    "lint": {},
+    "doc_comment": {
+      "fullDocs": true,
+      "strong": true
+    }
+  }
 }
