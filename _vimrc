@@ -1,7 +1,7 @@
 " set vim path
 let $VIMFILES = $VIM.'/vimfiles'
 let $VIMRC = $VIM.'/_vimrc'
-let $VIMHOME = $vim.'/vim74'
+let $VIMHOME = $vim.'/vim80'
 let $VUNDLE = $VIMFILES."/bundle"
 let $UNDOCACHE = $VIM."/.cache/undodir"
 let $BACKUPCACHE = $VIM."/.cache/backup"
@@ -119,6 +119,8 @@ set ambiwidth=double
 set tabstop=4
 set smarttab
 set autoindent
+set smartindent
+set showbreak=>>>
 set shiftwidth=4
 set softtabstop=4
 set list  
@@ -174,7 +176,7 @@ set laststatus=2
 
 " set optimization
 set timeout
-lcd D:/
+lcd E:/
 nmap Q <Esc>
 set hidden
 set bsdir=buffer
@@ -227,7 +229,7 @@ set directory=z:/.cache/swp,$SWPCACHE
 " set backup
 set backup
 set writebackup
-set history=10240
+set history=1024
 set backupcopy=auto
 if exists('*mkdir') && !isdirectory($BACKUPCACHE)
     sil! cal mkdir($BACKUPCACHE, 'p')
@@ -243,6 +245,7 @@ if exists('*mkdir') && !isdirectory($UNDOCACHE)
     sil! cal mkdir($UNDOCACHE, 'p')
 endif
 set undodir=$UNDOCACHE
+
 
 "load my config
 source $VIM/vimfiles/conf/conf.vim
