@@ -94,6 +94,8 @@ Plugin 'mxw/vim-jsx'
  
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
+
+Plugin 'skywind3000/asyncrun.vim'
  
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'scrooloose/nerdtree'
@@ -120,7 +122,8 @@ set tabstop=4
 set smarttab
 set autoindent
 set smartindent
-set showbreak=>>>
+set breakindent
+set showbreak=>>>>
 set shiftwidth=4
 set softtabstop=4
 set list  
