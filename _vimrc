@@ -179,7 +179,7 @@ set laststatus=2
 
 " set optimization
 set timeout
-lcd E:/
+lcd C:/
 nmap Q <Esc>
 set hidden
 set bsdir=buffer
