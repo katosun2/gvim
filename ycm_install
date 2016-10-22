@@ -5,3 +5,5 @@ cmake -G "Visual Studio 14" -DPATH_TO_LLVM_ROOT=../../../../bin/LLVM . ../third_
 cmake --build . --target ycm_core --config Release
 cd ../third_party/ycmd/third_party/tern_runtime && npm install --production
 pause
+
+install.py
