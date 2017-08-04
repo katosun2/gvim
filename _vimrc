@@ -127,8 +127,7 @@ set breakindent
 set showbreak=>>>>
 " size of an "indent"
 set shiftwidth=4
-"set softtabstop=4
-set softtabstop=0
+set softtabstop=4
 " always uses spaces instead of tab characters
 set expandtab
 set list  
