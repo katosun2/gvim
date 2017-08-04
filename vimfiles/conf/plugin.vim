@@ -48,6 +48,16 @@ let g:vimrc_homepage='http://www.imiku.com'
 map <leader>my <ESC>:AuthorInfoDetect<cr>   
 imap <leader>my <ESC>:AuthorInfoDetect<cr>   
 
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = {
+	\ 'javascript': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' },
+    \ 'javascript.jquery': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' },
+    \ 'scss': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' },
+    \ 'less': { 'left': '/* ', 'right': ' */' },
+    \ 'htmldjango': { 'left': '<!-- ', 'right': ' -->', 'leftAlt': '{# ', 'rightAlt': ' #}' },
+    \ 'php': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' }
+	\ }
+
 
 " fencview
 let g:fencview_autodetect=0
