@@ -131,7 +131,7 @@ set softtabstop=4
 " always uses spaces instead of tab characters
 set expandtab
 set list  
-"set listchars=tab:\|-
+set listchars=tab:\|-
 set nu
 set numberwidth=5
 set title 
