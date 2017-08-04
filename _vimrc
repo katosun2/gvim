@@ -118,16 +118,21 @@ set formatoptions=tcrqn
 
 " set view
 set ambiwidth=double
+" size of a hard tabstop
 set tabstop=4
 set smarttab
 set autoindent
 set smartindent
 set breakindent
 set showbreak=>>>>
+" size of an "indent"
 set shiftwidth=4
-set softtabstop=4
+"set softtabstop=4
+set softtabstop=0
+" always uses spaces instead of tab characters
+set expandtab
 set list  
-set listchars=tab:\|-
+"set listchars=tab:\|-
 set nu
 set numberwidth=5
 set title 

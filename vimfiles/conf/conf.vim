@@ -151,7 +151,7 @@ nnoremap <leader>2 :set ft=css syn=css<CR>
 nnoremap <leader>3 :set ft=javascript syn=javascript<CR>
 nnoremap <leader>4 :set ft=php<CR>
 nnoremap <leader>5 :set ft=vim<CR>
-nnoremap <leader>6 :set ft=less<CR>
+nnoremap <leader>6 :set ft=scss<CR>
 nnoremap <leader>7 :set ft=smarty<CR>
 nnoremap <leader>8 :set ft=snippet<CR>
 nnoremap <leader>9 :set ft=markdown<CR>
