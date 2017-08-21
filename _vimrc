@@ -189,10 +189,13 @@ set hidden
 set bsdir=buffer
 
 
-" set warn
+" set warn，close ding ding ding 
 set noerrorbells            
 set novb            
-set t_vb=""
+" set t_vb=""
+" 关闭各种按键叮叮声音和闪屏
+set vb t_vb=
+au GuiEnter * set t_vb=
 
 
 " set foldmethod
