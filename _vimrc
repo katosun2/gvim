@@ -10,11 +10,11 @@ let $VIEWCACHE = $VIM."/.cache/view"
 let $MRU = $VIM."/.cache/mru"
 let $BROWSERS=$VIM."/browsers"
 
-" TODO
-" let $AG=$VIMFILES.'/bin/lib/ag.exe'
-let $NODEMODULES = 'H:/bin/node_modules/.bin'
+" third party app
+let $AG=$VIM.'/third_party/Ag/ag.exe'
+let $AJAXMIN = $VIM.'/third_party/AjaxMin/AjaxMin.exe'
+let $NODEMODULES = $VIM.'/bin/node_modules/.bin'
 let $JSHINT = $NODEMODULES.'/jshint.cmd'
-let $AJAXMIN = ''
 
 " add YouCompleteMe path
 let $RUNTIMEPATH=$VIM.'/YouCompleteMe'
