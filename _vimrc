@@ -16,6 +16,10 @@ let $NODEMODULES = 'H:/bin/node_modules/.bin'
 let $JSHINT = $NODEMODULES.'/jshint.cmd'
 let $AJAXMIN = ''
 
+" add YouCompleteMe path
+let $RUNTIMEPATH=$VIM.'/YouCompleteMe'
+set runtimepath+=$RUNTIMEPATH
+
 " set leader 
 let mapleader=","
 let g:mapleader=","
@@ -101,7 +105,7 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'sirver/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 sy on
