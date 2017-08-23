@@ -198,9 +198,7 @@ let g:jsx_ext_required = 0
 
 
 " AjaxMin comparess css/js 
-if !executable('jshint')
-	let g:ajaxmin_cmd = 'AjaxMin'
-else
+if executable($AJAXMIN)
 	let g:ajaxmin_cmd = $AJAXMIN
 endif
 
