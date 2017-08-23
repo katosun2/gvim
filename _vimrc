@@ -31,7 +31,7 @@ let g:maplocalleader="."
 if has("multi_byte")
     " A,set encoding
     set encoding=utf-8
-    set fileencodings=utf-8,cp932,cp936
+    set fileencodings=utf-8,cp936,cp932
     set tenc=utf-8
     set maxcombine=4
     " open asia support

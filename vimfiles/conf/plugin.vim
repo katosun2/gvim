@@ -60,7 +60,7 @@ let g:NERDCustomDelimiters = {
 
 
 " fencview
-let g:fencview_autodetect=1
+let g:fencview_autodetect=0
 map <silent><F3> <ESC>:FencView<cr>
 
 
