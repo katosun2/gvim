@@ -31,7 +31,7 @@ let g:maplocalleader="."
 if has("multi_byte")
     " A,set encoding
     set encoding=utf-8
-    set fileencodings=utf-8,cp936,chinese,cp932
+    set fileencodings=utf-8,cp932,cp936
     set tenc=utf-8
     set maxcombine=4
     " open asia support
@@ -86,6 +86,7 @@ Plugin 'yegappan/mru'
 Plugin 'mbbill/fencview'
 Plugin 'vim-scripts/Modeliner'
 Plugin 'tpope/vim-surround'
+Plugin 'ynkdir/vim-iconv'
 
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
