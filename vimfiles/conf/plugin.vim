@@ -26,9 +26,9 @@ let MRU_Window_Height = 10
 
 " Ag search
 if !executable("ag")
-	let g:agprg=$AG . " --column --smart-case"
+	let g:ag_prg=$AG . " --column --smart-case"
 else
-	let g:agprg="ag --column --smart-case"
+	let g:ag_prg="ag --column --smart-case"
 endif
 
 
