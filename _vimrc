@@ -77,6 +77,8 @@ call vundle#rc($VUNDLE)
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 
+Plugin 'chemzqm/wxapp.vim'
+
 Plugin 'katosun2/imiku'
 Plugin 'katosun2/jellybeans.vim'
 Plugin 'katosun2/vim-browsers'
