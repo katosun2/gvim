@@ -148,6 +148,7 @@ set fillchars+=vert:\ ,stl:\ ,stlnc:\
 set whichwrap+=<,>,[,]
 set iskeyword+=_,$,@,%,#,-
 set t_Co=256
+set re=1
 
 
 " tab for cmd-line commplement
