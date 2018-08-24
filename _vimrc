@@ -123,6 +123,10 @@ set nobomb
 set formatoptions=tcrqn
 
 
+" set IM model
+set iminsert=1
+
+
 " set view
 set ambiwidth=double
 " size of a hard tabstop
