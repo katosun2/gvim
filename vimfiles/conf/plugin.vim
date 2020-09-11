@@ -121,7 +121,7 @@ let g:ycm_language_server = [
   \   {
   \     'name': 'vue',
   \     'filetypes': [ 'vue' ],
-  \     'cmdline': [ expand( $VIMFILES.'\bundle\vetur\vls' ) ]
+  \     'cmdline': [ expand( $VIMFILES.'\bundle\vetur\server\bin\vls' ) ]
   \   }
   \ ]
 
