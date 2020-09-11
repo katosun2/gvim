@@ -84,6 +84,9 @@ Plugin 'katosun2/jellybeans.vim'
 Plugin 'katosun2/vim-browsers'
 Plugin 'katosun2/load_template'
 
+Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'thosakwe/vim-flutter'
+
 Plugin 'yegappan/mru'
 Plugin 'mbbill/fencview'
 Plugin 'vim-scripts/Modeliner'
