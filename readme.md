@@ -21,3 +21,10 @@ git clone https://github.com/ycm-core/YouCompleteMe
 ```
 python install.py --clang-completer --ts-completer  --msvc 15
 ```
+
+## vetur
+```
+cd ./vimfiles/bundle/vetur
+yarn 
+yarn compile
+```

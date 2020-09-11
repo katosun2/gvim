@@ -83,6 +83,9 @@ Plugin 'katosun2/imiku'
 Plugin 'katosun2/jellybeans.vim'
 Plugin 'katosun2/vim-browsers'
 Plugin 'katosun2/load_template'
+Plugin 'katosun2/vetur'
+
+Plugin 'posva/vim-vue'
 
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'thosakwe/vim-flutter'

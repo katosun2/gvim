@@ -1,7 +1,7 @@
 "=============================================================================
 "     FileName: plugin.vim
 "         Desc: 插件配置  
-"   LastChange: 2020-09-11 11:47:15
+"   LastChange: 2020-09-11 17:13:32
 "=============================================================================
 " open browsers's lnk path
 if exists('*mkdir') && !isdirectory($BROWSERS)
@@ -83,7 +83,7 @@ let g:snips_author = "katosun2"
 
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf=$VIM.'/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf=$VIM.'/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_min_num_of_chars_for_completion=2
 let g:ycm_confirm_extra_conf=0
 let g:ycm_seed_identifiers_with_syntax=1
@@ -99,7 +99,7 @@ let g:ycm_semantic_triggers={
 			\   'cpp,objcpp' : ['->', '.', '::'],
 			\   'perl' : ['->'],
 			\   'php' : ['->', '::'],
-			\   'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
+			\   'cs,java,javascript,d,vim,vue,jsx,python,perl6,scala,vb,elixir,go' : ['.'],
 			\   'ruby' : ['.', '::'],
 			\   'lua' : ['.', ':'],
 			\   'erlang' : [':'],
@@ -117,6 +117,13 @@ let g:ycm_filetype_blacklist={
 			\ 'pandoc' : 1,
 			\ 'mail' : 1
 			\}
+let g:ycm_language_server = [
+  \   {
+  \     'name': 'vue',
+  \     'filetypes': [ 'vue' ],
+  \     'cmdline': [ expand( $VIMFILES.'\bundle\vetur\vls' ) ]
+  \   }
+  \ ]
 
 
 " doxygenToolkit for vim
@@ -209,8 +216,5 @@ endif
 
 let g:ajaxmin_cmd_jsopt = '-clobber:true -term'
 let g:ajaxmin_cmd_cssopt = '-clobber:true -term -comments:hacks'
-
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
 
 " vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 
