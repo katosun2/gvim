@@ -1,65 +1,65 @@
 " GUI
 if has("gui_running")
-    "au GUIEnter * simalt ~x " max win
-    set guioptions-=m       "  hide menu  
-    set guioptions-=T       " hide tools  
-    set guioptions-=L       " hide left scroll  
-    set guioptions-=r       " hide right scroll  
-    set guioptions-=b       " hide bottom scroll  
-    "set completeopt-=preview " hide preview
-    
-    " load gui lib
-    "let g:gvim_screen_lib = $VIMFILES.'/bin/lib/gvimfullscreen_x32.dll'
+	"au GUIEnter * simalt ~x " max win
+	set guioptions-=m       "  hide menu  
+	set guioptions-=T       " hide tools  
+	set guioptions-=L       " hide left scroll  
+	set guioptions-=r       " hide right scroll  
+	set guioptions-=b       " hide bottom scroll  
+	"set completeopt-=preview " hide preview
 
-    " full win 
-    "nmap <F11> <ESC>:call ToggleFullScreen()<CR>   
-    " to TOP
-    "nmap <silent><leader>T <esc>:call SwitchVimTopMostMode()<cr>
-    " add alpha
-    "nmap <silent><leader>A <esc>:call SetAlpha(25)<cr>
-    " dec alpha
-    "nmap <silent><leader>a <esc>:call SetAlpha(-25)<cr>
+	" load gui lib
+	"let g:gvim_screen_lib = $VIMFILES.'/bin/lib/gvimfullscreen_x32.dll'
 
-    " full fun
-    "function! ToggleFullScreen()
-        "call libcallnr(g:gvim_screen_lib, 'ToggleFullScreen', 1)
-    "endfunction
+	" full win 
+	"nmap <F11> <ESC>:call ToggleFullScreen()<CR>   
+	" to TOP
+	"nmap <silent><leader>T <esc>:call SwitchVimTopMostMode()<cr>
+	" add alpha
+	"nmap <silent><leader>A <esc>:call SetAlpha(25)<cr>
+	" dec alpha
+	"nmap <silent><leader>a <esc>:call SetAlpha(-25)<cr>
 
-     " alpha
-     "let g:VimAlpha = 245
-     "function! SetAlpha(alpha)
-         "let g:VimAlpha = g:VimAlpha + a:alpha
-         "if g:VimAlpha < 0
-             "let g:VimAlpha = 15 
-         "endif
-         "if g:VimAlpha > 255
-             "let g:VimAlpha = 255
-         "endif
-         "call libcallnr(g:gvim_screen_lib, 'SetAlpha', g:VimAlpha)
-     "endfunction
+	" full fun
+	"function! ToggleFullScreen()
+	"call libcallnr(g:gvim_screen_lib, 'ToggleFullScreen', 1)
+	"endfunction
 
-     " set top
-     "let g:VimTopMost = 0
-     "function! SwitchVimTopMostMode()
-         "if g:VimTopMost == 0
-             "let g:VimTopMost = 1
-         "else
-             "let g:VimTopMost = 0
-         "endif
-         "call libcallnr(g:gvim_screen_lib, 'EnableTopMost', g:VimTopMost)
-     "endfunction
+	" alpha
+	"let g:VimAlpha = 245
+	"function! SetAlpha(alpha)
+	"let g:VimAlpha = g:VimAlpha + a:alpha
+	"if g:VimAlpha < 0
+	"let g:VimAlpha = 15 
+	"endif
+	"if g:VimAlpha > 255
+	"let g:VimAlpha = 255
+	"endif
+	"call libcallnr(g:gvim_screen_lib, 'SetAlpha', g:VimAlpha)
+	"endfunction
 
-    " default alpha
-    "autocmd GUIEnter * call libcallnr(g:gvim_screen_lib, 'SetAlpha', g:VimAlpha)
- endif
+	" set top
+	"let g:VimTopMost = 0
+	"function! SwitchVimTopMostMode()
+	"if g:VimTopMost == 0
+	"let g:VimTopMost = 1
+	"else
+	"let g:VimTopMost = 0
+	"endif
+	"call libcallnr(g:gvim_screen_lib, 'EnableTopMost', g:VimTopMost)
+	"endfunction
+
+	" default alpha
+	"autocmd GUIEnter * call libcallnr(g:gvim_screen_lib, 'SetAlpha', g:VimAlpha)
+endif
 
 " rember
 augroup vimrcEx 
-    autocmd!
-    autocmd BufReadPost *
-        \ if line("'\"") > 0 && line("'\"")<=line("$") |
-        \   exe "normal g`\"" |
-        \ endif
+	autocmd!
+	autocmd BufReadPost *
+				\ if line("'\"") > 0 && line("'\"")<=line("$") |
+				\   exe "normal g`\"" |
+				\ endif
 augroup END
 
 " set status
@@ -166,35 +166,35 @@ nmap <silent><leader>pf <esc>:call g:SelectPrevFen()<cr>
 
 " mode show
 func! g:MyMode()
-    let s:str = ''
-    "get cur mode
-    let s:cur = mode()
-    if s:cur == 'i'
-        "let s:str = '编辑模式'
-        let s:str = 'o(*￣▽￣*)o '
-        hi User7 guifg=#49AF47  guibg=#413C41 gui=bold
-    elseif s:cur =='n'
-        "let s:str = '一般模式'
-        let s:str = 'o(°▽、°o)'
-        hi User7 guifg=#4386C7  guibg=#413C41 gui=bold
-    elseif s:cur =='V'
-        "let s:str = '可视模式'
-        let s:str = '（⊙＿⊙）'
-        hi User7 guifg=#FF6600  guibg=#413C41 gui=bold
-    elseif s:cur =='c'
-        "let s:str = '查找模式'
-        let s:str = '(￣ c￣)'
-        hi User7 guifg=#FF0066  guibg=#413C41 gui=bold
-    "编辑下 c-v c-v
-    elseif s:cur =='' 
-        "let s:str = "块模式"
-        let s:str = '（⊙＿⊙）'
-        hi User7 guifg=#FF6600  guibg=#413C41 gui=bold
-    else
-        let s:str = s:cur
-    endif
+	let s:str = ''
+	"get cur mode
+	let s:cur = mode()
+	if s:cur == 'i'
+		"let s:str = '编辑模式'
+		let s:str = 'o(*￣▽￣*)o '
+		hi User7 guifg=#49AF47  guibg=#413C41 gui=bold
+	elseif s:cur =='n'
+		"let s:str = '一般模式'
+		let s:str = 'o(°▽、°o)'
+		hi User7 guifg=#4386C7  guibg=#413C41 gui=bold
+	elseif s:cur =='V'
+		"let s:str = '可视模式'
+		let s:str = '（⊙＿⊙）'
+		hi User7 guifg=#FF6600  guibg=#413C41 gui=bold
+	elseif s:cur =='c'
+		"let s:str = '查找模式'
+		let s:str = '(￣ c￣)'
+		hi User7 guifg=#FF0066  guibg=#413C41 gui=bold
+		"编辑下 c-v c-v
+	elseif s:cur =='' 
+		"let s:str = "块模式"
+		let s:str = '（⊙＿⊙）'
+		hi User7 guifg=#FF6600  guibg=#413C41 gui=bold
+	else
+		let s:str = s:cur
+	endif
 
-    return s:str
+	return s:str
 endfunc
 
 
@@ -210,9 +210,9 @@ function! g:SelectFunc()
 			" change ^M to enter
 			call g:ChangMtoCR()
 		elseif fw==3
-            let file_bat=$VIMFILES.'/bin/ctags/copy.bat'
-            let file_bat=substitute(file_bat,'\','/',"g")
-            exec ":! ".file_bat
+			let file_bat=$VIMFILES.'/bin/ctags/copy.bat'
+			let file_bat=substitute(file_bat,'\','/',"g")
+			exec ":! ".file_bat
 		elseif fw==4
 			if has("win32") || has("win64")
 				let ctagsdir=$VIMFILES.'/bin/ctags/ctags.exe'
@@ -247,91 +247,93 @@ endfunc
 " ^m替换成CR,这里的“^M”要使用编辑模式下“CTRL-V CTRL-M”生成，而不是直接键入“^M”。
 " c:confirm，每次替換前會詢問。 e:不顯示 error。 g:globe，不詢問，整行替換。 i:ignore 不分大小寫。 
 function! g:ChangMtoCR()
-    exec ":%s/^$//e"   
-    exec ":%s/$//e"    
-    exec ":%s//\r/e"   
+	exec ":%s/^$//e"   
+	exec ":%s/$//e"    
+	exec ":%s//\r/e"   
 endf    
 
 " 折叠方式选择
 function! g:SelectNextFen()
-    let l:foldname = &foldmethod
+	let l:foldname = &foldmethod
 
-    if l:foldname == 'marker'
-        exec ":set foldmethod=manual"
-    elseif l:foldname == 'manual'
-        exec ":set foldmethod=syntax"
-    elseif l:foldname == "syntax"
-        exec ":set foldmethod=indent"
-    elseif l:foldname == "indent"
-        exec ":set foldmethod=diff"
-    elseif l:foldname == "diff"
-        exec ":set foldmethod=expr"
-    else
-        exec ":set foldmethod=marker"
-    endif
+	if l:foldname == 'marker'
+		exec ":set foldmethod=manual"
+	elseif l:foldname == 'manual'
+		exec ":set foldmethod=syntax"
+	elseif l:foldname == "syntax"
+		exec ":set foldmethod=indent"
+	elseif l:foldname == "indent"
+		exec ":set foldmethod=diff"
+	elseif l:foldname == "diff"
+		exec ":set foldmethod=expr"
+	else
+		exec ":set foldmethod=marker"
+	endif
 endf
 function! g:SelectPrevFen()
-    let l:foldname = &foldmethod
+	let l:foldname = &foldmethod
 
-    if l:foldname == 'diff'
-        exec ":set foldmethod=indent"
-    elseif l:foldname == 'manual'
-        exec ":set foldmethod=marker"
-    elseif l:foldname == "syntax"
-        exec ":set foldmethod=manual"
-    elseif l:foldname == "indent"
-        exec ":set foldmethod=syntax"
-    elseif l:foldname == "marker"
-        exec ":set foldmethod=expr"
-    else
-        exec ":set foldmethod=diff"
-    endif
+	if l:foldname == 'diff'
+		exec ":set foldmethod=indent"
+	elseif l:foldname == 'manual'
+		exec ":set foldmethod=marker"
+	elseif l:foldname == "syntax"
+		exec ":set foldmethod=manual"
+	elseif l:foldname == "indent"
+		exec ":set foldmethod=syntax"
+	elseif l:foldname == "marker"
+		exec ":set foldmethod=expr"
+	else
+		exec ":set foldmethod=diff"
+	endif
 endf
 
 
 " 上次修改
 fu! g:FileTime()
-    let ext=tolower(expand("%:e"))
-    let fname=tolower(expand('%<'))
-    let filename=fname . '.' . ext
-    let msg=""
-    let msg=msg." ".strftime("(Modified %Y/%m/%d %H:%M:%S)",getftime(filename))
-    return msg
+	let ext=tolower(expand("%:e"))
+	let fname=tolower(expand('%<'))
+	let filename=fname . '.' . ext
+	let msg=""
+	let msg=msg." ".strftime("(Modified %Y/%m/%d %H:%M:%S)",getftime(filename))
+	return msg
 endf
 
 
 "获取当前目录
 function! g:GetPWD()
-    return substitute(getcwd(), "", "", "g")
+	return substitute(getcwd(), "", "", "g")
 endfunction
 
 
 " 中文编码转换 for win 
 function! g:TranCoding(str,to,from)
-    if exists("iconv") && v:lang == 'zh_CN.utf-8'
-        let dialogtxt = iconv(a:str,a:to,a:from)
-        return dialogtxt
-    endif
-    return str;
+	if exists("iconv") && v:lang == 'zh_CN.utf-8'
+		let dialogtxt = iconv(a:str,a:to,a:from)
+		return dialogtxt
+	endif
+	return str;
 endf
 
 " 路径处理
 function! g:PathProc(file)
-    let current_file = substitute(a:file,'Program Files','Progra~1','g')
-    return current_file
+	let current_file = substitute(a:file,'Program Files','Progra~1','g')
+	return current_file
 endfunction
 
 " 显示缩进方式
 function! g:ShowFen()
-    let l:foldname = &foldmethod
-    return toupper(l:foldname)
-    "if l:foldname == 'manual'
-        "return "手动"
-    "elseif l:foldname == 'syntax'
-        "return "语法"
-    "elseif l:foldname == "expr"
-        "return "表达式"
-    "else
-        "return l:foldname
-    "endif
+	let l:foldname = &foldmethod
+	return toupper(l:foldname)
+	"if l:foldname == 'manual'
+	"return "手动"
+	"elseif l:foldname == 'syntax'
+	"return "语法"
+	"elseif l:foldname == "expr"
+	"return "表达式"
+	"else
+	"return l:foldname
+	"endif
 endf
+
+" vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 

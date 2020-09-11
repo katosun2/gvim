@@ -29,34 +29,34 @@ let g:maplocalleader="."
 
 " set encode
 if has("multi_byte")
-    " A,set encoding
-    set encoding=utf-8
-    set fileencodings=utf-8,cp936,cp932
-    set tenc=utf-8
-    set maxcombine=4
-    " open asia support
-    set fo+=mBM
-    if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)\|\(jp\)'
-        set ambiwidth=double
+  " A,set encoding
+  set encoding=utf-8
+  set fileencodings=utf-8,cp936,cp932
+  set tenc=utf-8
+  set maxcombine=4
+  " open asia support
+  set fo+=mBM
+  if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)\|\(jp\)'
+    set ambiwidth=double
+  endif
+
+  if has("win32") || has("win64")
+    "set fenc=chinese
+    set fenc=utf-8
+    if version>=603
+      set helplang=cn
     endif
+  else
+    set fenc=utf-8
+  endif
 
-    if has("win32") || has("win64")
-        "set fenc=chinese
-        set fenc=utf-8
-        if version>=603
-            set helplang=cn
-        endif
-    else
-        set fenc=utf-8
-    endif
+  let &termencoding=&encoding
 
-    let &termencoding=&encoding
-
-    " B,vim tips support
-    language messages zh_CN.utf-8
-    "set langmenu=zh_CN.utf-8
-    "source $VIMFILES/delmenu.vim
-    "source $VIMFILES/menu.vim
+  " B,vim tips support
+  language messages zh_CN.utf-8
+  "set langmenu=zh_CN.utf-8
+  "source $VIMFILES/delmenu.vim
+  "source $VIMFILES/menu.vim
 endif
 
 
@@ -101,12 +101,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mattn/webapi-vim'
 Plugin 'mxw/vim-jsx'
- 
+
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 
 Plugin 'skywind3000/asyncrun.vim'
- 
+
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -133,15 +133,15 @@ set iminsert=1
 " set view
 set ambiwidth=double
 " size of a hard tabstop
-set tabstop=4
+set tabstop=2
 set smarttab
 set autoindent
 set smartindent
 set breakindent
 set showbreak=>>>>
 " size of an "indent"
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 " always uses spaces instead of tab characters
 set expandtab
 set list  
@@ -238,7 +238,7 @@ autocmd! bufwritepost $VIMRC source $VIMRC
 au BufWinLeave _vimrc,*.js,*.html,*.htm,*.less,*.css,*.php,*.wiki mkview
 au BufWinEnter _vimrc,*.js,*.html,*.htm,*.less,*.css,*.php,*.wiki silent loadview
 if exists('*mkdir') && !isdirectory($VIEWCACHE)
-    sil! cal mkdir($VIEWCACHE, 'p')
+  sil! cal mkdir($VIEWCACHE, 'p')
 endif
 set viewdir=$VIEWCACHE
 
@@ -246,7 +246,7 @@ set viewdir=$VIEWCACHE
 " set swp
 set noswapfile
 if exists('*mkdir') && !isdirectory($SWPCACHE)
-    sil! cal mkdir($SWPCACHE, 'p')
+  sil! cal mkdir($SWPCACHE, 'p')
 endif
 set directory=z:/.cache/swp,$SWPCACHE
 
@@ -257,7 +257,7 @@ set writebackup
 set history=1024
 set backupcopy=auto
 if exists('*mkdir') && !isdirectory($BACKUPCACHE)
-    sil! cal mkdir($BACKUPCACHE, 'p')
+  sil! cal mkdir($BACKUPCACHE, 'p')
 endif
 set backupdir=Z:,$BACKUPCACHE
 
@@ -267,7 +267,7 @@ set undofile
 set undolevels=10000
 set undoreload=10000
 if exists('*mkdir') && !isdirectory($UNDOCACHE)
-    sil! cal mkdir($UNDOCACHE, 'p')
+  sil! cal mkdir($UNDOCACHE, 'p')
 endif
 set undodir=$UNDOCACHE
 
@@ -277,4 +277,4 @@ source $VIM/vimfiles/conf/conf.vim
 source $VIM/vimfiles/conf/plugin.vim
 source $VIM/vimfiles/conf/diff.vim
 
-" vim: set et fdm=marker ff=dos sts=4 sw=4 ts=4 tw=78 : 
+" vim: set et fdm=marker ff=dos sts=2 sw=2 ts=2 tw=78 : 

@@ -1,7 +1,7 @@
 .cache/
 browsers/
 vim74/
-vim80/
+vim*/
 vimfiles/bundle
 bin/
 YouCompleteMe/

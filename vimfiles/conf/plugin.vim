@@ -1,6 +1,11 @@
+"=============================================================================
+"     FileName: plugin.vim
+"         Desc: 插件配置  
+"   LastChange: 2020-09-11 11:47:15
+"=============================================================================
 " open browsers's lnk path
 if exists('*mkdir') && !isdirectory($BROWSERS)
-    sil! cal mkdir($BROWSERS, 'p')
+	sil! cal mkdir($BROWSERS, 'p')
 endif
 let $BROWSERS = $BROWSERS
 
@@ -16,11 +21,11 @@ map <silent><leader>sm <esc><s-g>o<esc>:Modeliner<cr>
 
 " MRU
 if exists('*mkdir') && !isdirectory($MRU)
-    sil! cal mkdir($MRU, 'p')
+	sil! cal mkdir($MRU, 'p')
 endif
 let MRU_File = $MRU . '/_vim_mru_files'
-let MRU_Max_Entries = 10
-let MRU_Include_Files = '\.vue$\|\.scss$\|\.opf$\|\.js$\|\.java$\|\.jsx$\|\.ejs$\|\.css$\|\.html$\|\.htm$\|\.php$\|\.ini$\|\.conf$\|\.cs\|\.txt$\|\.wxss$\|\.wxml$\|\.json$'
+let MRU_Max_Entries = 20
+let MRU_Include_Files = '\.vue$\|\.scss$\|\.opf$\|\.js$\|\.java$\|\.jsx$\|\.ejs$\|\.css$\|\.yaml$\|\.html$\|\.htm$\|\.php$\|\.ini$\|\.conf$\|\.cs\|\.txt$\|\.bat$\|\.vim$\|\.cmd$\|\.dart$\|\.wxss$\|\.wxml$\|\.json$'
 let MRU_Window_Height = 10
 
 
@@ -50,13 +55,13 @@ imap <leader>my <ESC>:AuthorInfoDetect<cr>
 
 " Add your own custom formats or override the defaults
 let g:NERDCustomDelimiters = {
-	\ 'javascript': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' },
-    \ 'javascript.jquery': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' },
-    \ 'scss': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' },
-    \ 'less': { 'left': '/* ', 'right': ' */' },
-    \ 'htmldjango': { 'left': '<!-- ', 'right': ' -->', 'leftAlt': '{# ', 'rightAlt': ' #}' },
-    \ 'php': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' }
-	\ }
+			\ 'javascript': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' },
+			\ 'javascript.jquery': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' },
+			\ 'scss': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' },
+			\ 'less': { 'left': '/* ', 'right': ' */' },
+			\ 'htmldjango': { 'left': '<!-- ', 'right': ' -->', 'leftAlt': '{# ', 'rightAlt': ' #}' },
+			\ 'php': { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' }
+			\ }
 
 
 " fencview
@@ -88,30 +93,30 @@ let g:ycm_complete_in_comments=1
 let g:ycm_use_ultisnips_completer=1
 set completeopt-=preview
 let g:ycm_semantic_triggers={
-  \   'c' : ['->', '.'],
-  \   'objc' : ['->', '.'],
-  \   'ocaml' : ['.', '#'],
-  \   'cpp,objcpp' : ['->', '.', '::'],
-  \   'perl' : ['->'],
-  \   'php' : ['->', '::'],
-  \   'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
-  \   'ruby' : ['.', '::'],
-  \   'lua' : ['.', ':'],
-  \   'erlang' : [':'],
-  \ }
+			\   'c' : ['->', '.'],
+			\   'objc' : ['->', '.'],
+			\   'ocaml' : ['.', '#'],
+			\   'cpp,objcpp' : ['->', '.', '::'],
+			\   'perl' : ['->'],
+			\   'php' : ['->', '::'],
+			\   'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
+			\   'ruby' : ['.', '::'],
+			\   'lua' : ['.', ':'],
+			\   'erlang' : [':'],
+			\ }
 " block file format use ycm
 let g:ycm_filetype_blacklist={
-	\ 'tagbar' : 1,
-	\ 'qf' : 1,
-	\ 'notes' : 1,
-	\ 'markdown' : 1,
-	\ 'unite' : 1,
-	\ 'text' : 1,
-	\ 'vimwiki' : 1,
-	\ 'css' : 1,
-	\ 'pandoc' : 1,
-	\ 'mail' : 1
-\}
+			\ 'tagbar' : 1,
+			\ 'qf' : 1,
+			\ 'notes' : 1,
+			\ 'markdown' : 1,
+			\ 'unite' : 1,
+			\ 'text' : 1,
+			\ 'vimwiki' : 1,
+			\ 'css' : 1,
+			\ 'pandoc' : 1,
+			\ 'mail' : 1
+			\}
 
 
 " doxygenToolkit for vim
@@ -139,9 +144,9 @@ let g:ctrlp_open_new_file = 'h'
 let g:ctrlp_max_files = 5000
 let g:ctrlp_root_markers = ['.git','.svn']
 if isdirectory("z:/")
-    let g:ctrlp_cache_dir = 'z:/.cache/ctrlp'
+	let g:ctrlp_cache_dir = 'z:/.cache/ctrlp'
 else
-    let g:ctrlp_cache_dir = $VIM.'/.cache/ctrlp'
+	let g:ctrlp_cache_dir = $VIM.'/.cache/ctrlp'
 endif
 let g:ctrlp_max_depth = 5
 let g:ctrlp_max_history = 0
@@ -149,10 +154,10 @@ let g:ctrlp_mruf_max = 250
 let g:ctrlp_mruf_include = '\.html$\|\.less$\|\.css$\|\.scss$\|\.vue$\|\.js$\|\.jsx$\|\.ejs$\|\.php$'
 set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(exe|so|dll|zip|jpg|git|png)$',
-    \ 'link': '',
-\ }
+			\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+			\ 'file': '\v\.(exe|so|dll|zip|jpg|git|png)$',
+			\ 'link': '',
+			\ }
 
 
 " syntastic
@@ -169,25 +174,25 @@ map <silent><leader>jj <esc>:SyntasticCheck<cr>
 inoremap <silent><leader>jj <esc>:SyntasticCheck<cr>
 
 let g:syntastic_mode_map = { 
-    \ 'mode': 'passive',
-    \ 'active_filetypes': [],
-    \ 'passive_filetypes': []
-\ }
+			\ 'mode': 'passive',
+			\ 'active_filetypes': [],
+			\ 'passive_filetypes': []
+			\ }
 
 " add jshint checkers
 "if !executable('jshint')
-	"let g:syntastic_javascript_jshint_exec = $JSHINT
+"let g:syntastic_javascript_jshint_exec = $JSHINT
 "else
-	"let g:syntastic_javascript_jshint_exec = 'jshint'
+"let g:syntastic_javascript_jshint_exec = 'jshint'
 "endif
 "let g:syntastic_javascript_checkers = ['jshint']
 "let g:syntastic_javascript_jshint_args = '--config "' . $VIM . '/.jshintrc"'
 
 " add eslint checkers
 if !executable('eslint')
-    let g:syntastic_javascript_eslint_exec = $JSHINT
+	let g:syntastic_javascript_eslint_exec = $JSHINT
 else
-    let g:syntastic_javascript_eslint_exec = 'eslint'
+	let g:syntastic_javascript_eslint_exec = 'eslint'
 endif
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_args = '--no-eslintrc --config "' . $VIM . '/.eslintrc"'
@@ -205,4 +210,4 @@ endif
 let g:ajaxmin_cmd_jsopt = '-clobber:true -term'
 let g:ajaxmin_cmd_cssopt = '-clobber:true -term -comments:hacks'
 
-" vim: set noet fdm=manual ff=dos sts=4 sw=4 ts=4 tw=78 : 
+" vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 
