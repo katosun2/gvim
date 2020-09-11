@@ -235,8 +235,8 @@ set sessionoptions-=curdir
 " set view
 autocmd! bufenter,bufnewfile,winenter,tabenter * cd %:p:h
 autocmd! bufwritepost $VIMRC source $VIMRC
-au BufWinLeave _vimrc,*.js,*.html,*.htm,*.less,*.css,*.php,*.wiki mkview
-au BufWinEnter _vimrc,*.js,*.html,*.htm,*.less,*.css,*.php,*.wiki silent loadview
+au BufWinLeave _vimrc,*.js,*.jsx,*.dart,*.html,*.htm,*.less,*.css,*.php,*.wiki mkview
+au BufWinEnter _vimrc,*.js,*.jsx,*.dart,*.html,*.htm,*.less,*.css,*.php,*.wiki silent loadview
 if exists('*mkdir') && !isdirectory($VIEWCACHE)
   sil! cal mkdir($VIEWCACHE, 'p')
 endif

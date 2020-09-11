@@ -25,7 +25,7 @@ if exists('*mkdir') && !isdirectory($MRU)
 endif
 let MRU_File = $MRU . '/_vim_mru_files'
 let MRU_Max_Entries = 20
-let MRU_Include_Files = '\.vue$\|\.scss$\|\.opf$\|\.js$\|\.java$\|\.jsx$\|\.ejs$\|\.css$\|\.yaml$\|\.html$\|\.htm$\|\.php$\|\.ini$\|\.conf$\|\.cs\|\.txt$\|\.bat$\|\.vim$\|\.cmd$\|\.dart$\|\.wxss$\|\.wxml$\|\.json$'
+let MRU_Include_Files = '\.vue$\|\.scss$\|\.md$\|\.opf$\|\.js$\|\.java$\|\.jsx$\|\.ejs$\|\.css$\|\.yaml$\|\.html$\|\.htm$\|\.php$\|\.ini$\|\.conf$\|\.cs\|\.txt$\|\.bat$\|\.vim$\|\.cmd$\|\.dart$\|\.wxss$\|\.wxml$\|\.json$'
 let MRU_Window_Height = 10
 
 
@@ -151,7 +151,7 @@ endif
 let g:ctrlp_max_depth = 5
 let g:ctrlp_max_history = 0
 let g:ctrlp_mruf_max = 250
-let g:ctrlp_mruf_include = '\.html$\|\.less$\|\.css$\|\.scss$\|\.vue$\|\.js$\|\.jsx$\|\.ejs$\|\.php$'
+let g:ctrlp_mruf_include = '\.html$\|\.less$\|\.css$\|\.dart$\|\.yaml$\|\.scss$\|\.vue$\|\.js$\|\.jsx$\|\.ejs$\|\.php$'
 set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*
 let g:ctrlp_custom_ignore = {
 			\ 'dir':  '\v[\/]\.(git|hg|svn)$',
