@@ -3,21 +3,21 @@
 ## X64下载
 https://github.com/vim/vim-win32-installer/releases
 
-## 安装依懒
+## 安装/编译依懒
 1. Vim >= 8.2 X64
 2. python3 >= 3.8.0 X64
-3. 
-
+3. node >= 13.14 X64
+4. npm >= 6.14.4
+5. cmake >= 3.18.2 X64
 
 ## ycm编译问题
-https://stackoverflow.com/questions/51668676/cmake-visual-studio-15-2017-could-not-find-any-instance-of-visual-studio
+1. clone 项目https://github.com/ycm-core/YouCompleteMe
 ```
-1. Open Visual Studio
-2. Go to Tools -> Get Tools and Features
-3. In the "Workloads" tab enable "Desktop development with C++"
-4. Click Modify at the bottom right
-
-These steps resulted in the "Visual C++ tools for CMake" feature being installed, but the other optional C++ features included in this workload may also helpful for what you are trying to do.
-
-After the Visual Studio updater finishes installing try re-running the command. You may need to open a new command window.
+git clone https://github.com/ycm-core/YouCompleteMe
+```
+2. 安装 Visual Studio 2017+， 勾选 通用Windows平台开发(Desktop development with C++) 
+3. 如果提示空目录，需要删除**YouCompleteMe\third_party\ycmd\third_party\tsserver**目录
+4. 编译如下即可
+```
+python install.py --clang-completer --ts-completer  --msvc 15
 ```

@@ -210,4 +210,7 @@ endif
 let g:ajaxmin_cmd_jsopt = '-clobber:true -term'
 let g:ajaxmin_cmd_cssopt = '-clobber:true -term -comments:hacks'
 
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
 " vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 
