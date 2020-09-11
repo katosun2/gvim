@@ -42,7 +42,7 @@ let NERDMenuMode=0
 let NERDTreeShowBookmarks=0
 let NERDTreeChDirMode=2 
 " set ignore filetype
-let NERDTreeIgnore=['Thumbs.db','\~$','.DS_Store','\.svn$','\.git','\.pyc$','\.mp3','\.jpg','\.gif','\.swf','\.rar','\.zip','\.pdf','\.gz','\.bz2','\.dmg','\.doc','\.tar','\.png','\.rtf']
+let NERDTreeIgnore=['Thumbs.db','\~$','.DS_Store','\.pyc$','\.mp3','\.jpg','\.gif','\.swf','\.rar','\.zip','\.pdf','\.gz','\.bz2','\.dmg','\.doc','\.tar','\.png','\.rtf']
 map <silent><leader>uu <ESC>:NERDTree<cr>
 
 
