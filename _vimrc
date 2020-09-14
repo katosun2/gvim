@@ -114,7 +114,7 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'sirver/ultisnips'
-" Plugin 'Valloric/YouCompleteMe'
+"Plugin 'katosun2/YouCompleteMe'
 
 filetype plugin indent on
 sy on

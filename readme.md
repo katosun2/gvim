@@ -22,7 +22,11 @@ git clone https://github.com/ycm-core/YouCompleteMe
 python install.py --clang-completer --ts-completer  --msvc 15
 ```
 
-## vetur
+## ycm安装或补充缺失的文件 
+1. [必须]将 libclang.dll 复制一份到 ``YouCompleteMe/third_party/ycmd/third_party/clang/lib/``下面
+2. 安装``tsserver``
+
+## 安装vue语法分析服务 vetur
 ```
 cd ./vimfiles/bundle/vetur
 yarn 
