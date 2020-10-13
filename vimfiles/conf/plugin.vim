@@ -84,8 +84,8 @@ let g:snips_author="katosun2"
 
 " YouCompleteMe
 " 在接受补全后不分裂出一个窗口显示接受的项
-" set completeopt-=preview
-set completeopt=longest,menu
+set completeopt-=preview
+"set completeopt=longest,menu
 " 寻找全局配置文件
 let g:ycm_global_ycm_extra_conf=$VIM.'/.ycm_extra_conf.py'
 " 输入第4个字符就开始补全
@@ -156,7 +156,7 @@ endif
 let g:ctrlp_max_depth=5
 let g:ctrlp_max_history=0
 let g:ctrlp_mruf_max=250
-let g:ctrlp_mruf_include='\.html$\|\.less$\|\.css$\|\.dart$\|\.yaml$\|\.scss$\|\.vue$\|\.js$\|\.jsx$\|\.ejs$\|\.php$'
+let g:ctrlp_mruf_include='\.html$\|\.less$\|\.go$\|\.css$\|\.dart$\|\.yaml$\|\.scss$\|\.vue$\|\.js$\|\.jsx$\|\.ejs$\|\.php$'
 set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*
 let g:ctrlp_custom_ignore={
 			\ 'dir':  '\v[\/]\.(git|hg|svn)$',
