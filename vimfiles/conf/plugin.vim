@@ -216,5 +216,6 @@ let g:ajaxmin_cmd_cssopt='-clobber:true -term -comments:hacks'
 
 " vim-gitgutter
 set updatetime=100
+let g:gitgutter_sign_modified = '|'
 
 " vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 
