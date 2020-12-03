@@ -110,6 +110,8 @@ Plugin 'kien/ctrlp.vim'
 
 Plugin 'skywind3000/asyncrun.vim'
 
+Plugin 'airblade/vim-gitgutter'
+
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
