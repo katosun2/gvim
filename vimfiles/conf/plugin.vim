@@ -25,7 +25,7 @@ if exists('*mkdir') && !isdirectory($MRU)
 endif
 let MRU_File=$MRU . '/_vim_mru_files'
 let MRU_Max_Entries=20
-let MRU_Include_Files='\.vue$\|\.scss$\|\.md$\|\.go$\|\.opf$\|\.js$\|\.java$\|\.jsx$\|\.ejs$\|\.css$\|\.yaml$\|\.html$\|\.htm$\|\.php$\|\.ini$\|\.conf$\|\.cs\|\.txt$\|\.bat$\|\.vim$\|\.cmd$\|\.dart$\|\.wxss$\|\.wxml$\|\.json$'
+let MRU_Include_Files='\.vue$\|\.scss$\|\.md$\|\.go$\|\.opf$\|\.js$\|\.java$\|\.jsx$\|\.ejs$\|\.css$\|\.yaml$\|\.html$\|\.htm$\|\.php$\|\.ini$\|\.conf$\|\.cs\|\.txt$\|\.bat$\|\.vim$\|\.cmd$\|\.dart$\|\.wxss$\|\.wxml$\|\.proto$\|\.json$'
 let MRU_Window_Height=10
 
 
@@ -116,13 +116,12 @@ let g:ycm_key_invoke_completion='<C-c>'
 let g:ycm_language_server=[
   \   {
   \     'name': 'vue',
-  \     'filetypes': [ 'vue' ],
+  \     'filetypes': [ 'vue', 'ts', 'typescript' ],
   \     'cmdline': [ expand( $VIMFILES.'\bundle\vetur\server\bin\vls' ) ]
   \   }
   \ ]
 " 跳转到定义处
 nnoremap <leader>yd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
 
 " doxygenToolkit for vim
 let g:DoxygenToolkit_briefTag_pre="@method "
