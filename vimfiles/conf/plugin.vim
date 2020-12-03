@@ -214,7 +214,7 @@ endif
 let g:ajaxmin_cmd_jsopt='-clobber:true -term'
 let g:ajaxmin_cmd_cssopt='-clobber:true -term -comments:hacks'
 
-# vim-gitgutter
+" vim-gitgutter
 set updatetime=100
 
 " vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 
