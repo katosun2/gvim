@@ -97,7 +97,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'ynkdir/vim-iconv'
 
 Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/vimshell.vim'
+"Plugin 'Shougo/vimshell.vim'
 
 Plugin 'scrooloose/syntastic'
 
@@ -111,6 +111,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'skywind3000/asyncrun.vim'
 
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'scrooloose/nerdtree'

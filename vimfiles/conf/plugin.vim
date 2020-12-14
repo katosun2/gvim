@@ -218,4 +218,9 @@ let g:ajaxmin_cmd_cssopt='-clobber:true -term -comments:hacks'
 set updatetime=100
 let g:gitgutter_sign_modified = '|'
 
+" vim-fugitive
+nnoremap <Leader>gb :<C-u>:Git blame<CR>
+nnoremap <Leader>gd :<C-u>:Git diff<CR>
+nnoremap <Leader>gm :<C-u>:Git mergetool<CR>
+
 " vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 
