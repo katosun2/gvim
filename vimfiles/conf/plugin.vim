@@ -219,7 +219,7 @@ set updatetime=100
 let g:gitgutter_sign_modified = '|'
 
 " vim-fugitive
-nnoremap <Leader>gb :<C-u>:Git blame<CR>
+nnoremap <Leader>gb :<C-u>:Git blame -L 1,10<CR>
 nnoremap <Leader>gd :<C-u>:Git diff<CR>
 nnoremap <Leader>gm :<C-u>:Git mergetool<CR>
 

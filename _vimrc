@@ -102,6 +102,7 @@ Plugin 'katosun2/vimproc.vim'
 
 Plugin 'scrooloose/syntastic'
 
+Plugin 'leafgarland/typescript-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mattn/webapi-vim'
 Plugin 'mxw/vim-jsx'
