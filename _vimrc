@@ -88,6 +88,8 @@ Plugin 'katosun2/vetur'
 Plugin 'posva/vim-vue'
 
 Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'natebosch/vim-lsc'
+Plugin 'natebosch/vim-lsc-dart'
 Plugin 'thosakwe/vim-flutter'
 
 Plugin 'yegappan/mru'

@@ -81,6 +81,29 @@ let g:UltiSnipsSnippetsDir=$VIMFILES."/bundle/imiku/UltiSnips"
 let g:snips_author_email="neko@imiku.com"
 let g:snips_author="katosun2"
 
+function! g:UltiSnips_Complete()
+    call UltiSnips#ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips#JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-e>"
+" this mapping Enter key to <C-y> to chose the current highlight item
+" and close the selection list, same as other IDEs.
+" CONFLICT with some plugins like tpope/Endwise
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 
 " YouCompleteMe
 " 在接受补全后不分裂出一个窗口显示接受的项
@@ -222,5 +245,13 @@ let g:gitgutter_sign_modified = '|'
 nnoremap <Leader>gb :<C-u>:Git blame -L 1,10<CR>
 nnoremap <Leader>gd :<C-u>:Git diff<CR>
 nnoremap <Leader>gm :<C-u>:Git mergetool<CR>
+
+" vim-lsc
+let g:lsc_auto_map = v:true
+let g:lsc_server_commands = {'dart': 'dart_language_server'}
+let g:lsc_enable_autocomplete = v:false
+"auto dart dart format
+autocmd BufWritePre *.dart* DartFmt
+
 
 " vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 
