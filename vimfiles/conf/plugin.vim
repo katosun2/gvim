@@ -251,7 +251,7 @@ let g:lsc_auto_map = v:true
 let g:lsc_server_commands = {'dart': 'dart_language_server'}
 let g:lsc_enable_autocomplete = v:false
 "auto dart dart format
-autocmd BufWritePre *.dart* DartFmt
+"autocmd BufWritePre *.dart* DartFmt
 
 
 " vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 
