@@ -98,9 +98,9 @@ Plugin 'vim-scripts/Modeliner'
 Plugin 'tpope/vim-surround'
 Plugin 'ynkdir/vim-iconv'
 
-"Plugin 'Shougo/vimproc.vim'
-Plugin 'katosun2/vimproc.vim'
-"Plugin 'Shougo/vimshell.vim'
+Plugin 'Shougo/vimproc.vim'
+"Plugin 'katosun2/vimproc.vim'
+Plugin 'Shougo/vimshell.vim'
 
 Plugin 'scrooloose/syntastic'
 
