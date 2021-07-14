@@ -89,6 +89,7 @@ Plugin 'posva/vim-vue'
 
 "Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'katosun2/dart-vim-plugin'
+Plugin 'katosun2/fish-redux-template.vim'
 Plugin 'natebosch/vim-lsc'
 Plugin 'natebosch/vim-lsc-dart'
 Plugin 'thosakwe/vim-flutter'
@@ -122,6 +123,7 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'sirver/ultisnips'
+
 "Plugin 'katosun2/YouCompleteMe'
 
 filetype plugin indent on
@@ -282,6 +284,8 @@ if exists('*mkdir') && !isdirectory($UNDOCACHE)
 endif
 set undodir=$UNDOCACHE
 
+"load my dict
+set dictionary=$Vim./myDict.txt
 
 "load my config
 source $VIM/vimfiles/conf/conf.vim

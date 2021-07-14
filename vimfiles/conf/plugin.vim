@@ -256,5 +256,7 @@ let g:lsc_enable_autocomplete = v:false
 " dart-vim-plugin
 let g:dart_style_guide = 2
 
+" fish-redux-template.vim
+let g:fish_redux_templates_path=$VIMFILES.'/bundle/fish-redux-template.vim/templates/'
 
 " vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 
