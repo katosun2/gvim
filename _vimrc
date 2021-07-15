@@ -114,6 +114,11 @@ Plugin 'mxw/vim-jsx'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 
+" manual install npm install 
+Plugin 'ternjs/tern_for_vim'
+" manual install make js 
+Plugin 'maralla/completor.vim'
+
 Plugin 'skywind3000/asyncrun.vim'
 
 Plugin 'airblade/vim-gitgutter'

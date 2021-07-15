@@ -10,6 +10,14 @@ https://github.com/vim/vim-win32-installer/releases
 4. npm >= 6.14.4
 5. cmake >= 3.18.2 X64
 
+## 安装插件
+```
+" manual install npm install 
+Plugin 'ternjs/tern_for_vim'
+" manual install make js 
+Plugin 'maralla/completor.vim'
+```
+
 ## ycm编译问题
 1. clone 项目https://github.com/ycm-core/YouCompleteMe
 ```
