@@ -89,10 +89,14 @@ Plugin 'posva/vim-vue'
 
 "Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'katosun2/dart-vim-plugin'
-Plugin 'katosun2/fish-redux-template.vim'
 Plugin 'natebosch/vim-lsc'
 Plugin 'natebosch/vim-lsc-dart'
 Plugin 'thosakwe/vim-flutter'
+
+Plugin 'ap/vim-css-color'
+
+Plugin 'katosun2/fish-redux-template.vim'
+Plugin 'katosun2/getx-template.vim'
 
 Plugin 'yegappan/mru'
 Plugin 'mbbill/fencview'
