@@ -6,4 +6,5 @@
 "=============================================================================
 " vim-gitgutter
 let g:gitgutter_git_executable = 'D:\ryu\PortableGit\bin\git.exe'
+
 " vim: set noet fdm=manual ff=dos sts=2 sw=2 ts=2 tw=78 : 

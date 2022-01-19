@@ -25,7 +25,7 @@ if exists('*mkdir') && !isdirectory($MRU)
 endif
 let MRU_File=$MRU . '/_vim_mru_files'
 let MRU_Max_Entries=20
-let MRU_Include_Files='\.snippets$\|\.vue$\|\.scss$\|\.md$\|\.go$\|\.opf$\|\.js$\|\.java$\|\.jsx$\|\.ejs$\|\.css$\|\.yaml$\|\.html$\|\.htm$\|\.php$\|\.ini$\|\.conf$\|\.cs\|\.txt$\|\.sh$\|\.bat$\|\.vim$\|\.cmd$\|\.dart$\|\.wxss$\|\.wxml$\|\.proto$\|\.json$'
+let MRU_Include_Files='\.snippets$\|\.vue$\|\.ts$\|\.scss$\|\.md$\|\.go$\|\.opf$\|\.js$\|\.java$\|\.jsx$\|\.ejs$\|\.css$\|\.yaml$\|\.html$\|\.htm$\|\.php$\|\.ini$\|\.conf$\|\.cs\|\.txt$\|\.sh$\|\.bat$\|\.vim$\|\.cmd$\|\.dart$\|\.wxss$\|\.wxml$\|\.proto$\|\.json$'
 let MRU_Window_Height=10
 
 
