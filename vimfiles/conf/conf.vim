@@ -82,7 +82,8 @@ nmap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
 nmap <silent><leader>ls <ESC>:ls<cr>
 
 "新窗口打开文件,相关可查找:help gf"
-map <A-o> <ESC><C-w><C-f>
+"map <A-o> <ESC><C-w><C-f>
+map <A-o> <ESC>:call VimAliasFindFile("")<CR>
 map <leader>oo <ESC><C-w><C-f>
 
 "将文件改为可写,set value! 可进行切换,?为查询当前状态
