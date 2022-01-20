@@ -19,9 +19,6 @@ let $JSHINT = $NODEMODULES.'/jshint.cmd'
 " add YouCompleteMe path
 let $RUNTIMEPATH=$VIM.'/YouCompleteMe'
 set runtimepath+=$RUNTIMEPATH
-" add custom plugin
-let $CUSTOMPLUGIN=$VIM.'/customPlugin'
-set runtimepath+=$CUSTOMPLUGIN
 
 " set leader 
 let mapleader=","

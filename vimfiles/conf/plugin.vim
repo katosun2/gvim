@@ -140,7 +140,7 @@ let g:ycm_language_server=[
   \   {
   \     'name': 'vue',
   \     'filetypes': [ 'vue', 'ts', 'typescript' ],
-  \     'cmdline': [ expand( $VIMFILES.'\bundle\vetur\server\bin\vls' ) ]
+  \     'cmdline': [ expand($VIMFILES.'\bundle\vetur\server\bin\vls')]
   \   }
   \ ]
 " 跳转到定义处
